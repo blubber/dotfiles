@@ -864,21 +864,4 @@ vim.api.nvim_set_hl(0, 'LineNr', { fg = 'orange' })
 
 vim.opt.runtimepath:append '/Users/tiemo/src/vox.nvim'
 
-local vox_config = {
-  rate = 1.2,
-
-  sources = {
-    lnum = {
-      rate = 1.5,
-    },
-    line = { muted = true },
-  },
-}
-require('vox').setup(vox_config)
-
-vim.api.nvim_create_user_command('VoxReload', function()
-  package.loaded.vox = nil
-  require('vox').setup(vox_config)
-end, {})
-
 -- vim: ts=2 sts=2 sw=2 et

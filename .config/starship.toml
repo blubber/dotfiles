@@ -1,0 +1,22 @@
+add_newline = false
+format = """
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$custom\
+$jobs\
+$status\
+$character"""
+
+
+[character]
+success_symbol = "[➜](bold green)"
+
+
+[git_branch]
+format = "[$symbol$branch]($style) "
+style = "bold fg:blue"
+truncation_length = 12
+truncation_symbol = "_"
