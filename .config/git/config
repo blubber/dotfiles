@@ -1,7 +1,7 @@
 [user]
 	name = Tiemo Kieft
 	email = github@isogram.nl
-	signingkey = /Users/tiemo/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/PublicKeys/6ffc30f5c8a914c3199ac8681b65a92a.pub
+	#signingkey = /Users/tiemo/Library/Containers/com.maxgoedjen.Secretive.SecretAgent/Data/PublicKeys/6ffc30f5c8a914c3199ac8681b65a92a.pub
 
 [includeIf "hasconfig:remote.*.url:git@gitlab.antagonist.nl:*/**"]
 	path = config.group-one
@@ -12,7 +12,7 @@
 	format = ssh
 
 [commit]
-	gpgsign = true
+	gpgsign = false
 
 [tag]
-	gpgsign = true
+	gpgsign = false
