@@ -1,7 +1,17 @@
 vim.opt.runtimepath:append '/Users/tiemo/src/vox.nvim'
 
+local backend = require 'vox.backend'
+
 local vox_config = {
-  rate = 1.2,
+  backend = backend.setup {
+    routing = {
+      lnum = 'fast',
+      line = 'medium',
+      text = 'medium',
+      virt_text = 'slow',
+      meta = 'fast',
+    },
+  },
 
   sources = {
     lnum = {
@@ -12,11 +22,7 @@ local vox_config = {
 }
 require('vox').setup(vox_config)
 
-require('vox2').setup()
-
 vim.api.nvim_create_user_command('VoxReload', function()
   package.loaded.vox = nil
-  package.loaded.vox2 = nil
   require('vox').setup(vox_config)
-  require('vox2').setup()
 end, {})
