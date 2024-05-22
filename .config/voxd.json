@@ -3,6 +3,7 @@
 	"voices": {
 		"slow": { "rate": 1.2, "pitch": 0.9 },
 		"medium": { "rate":1.4},
-		"fast": { "rate":1.8}
+		"fast": { "rate":1.8},
+		"special": { "rate": 1.2, "pitch": 1.4 }
 	}
 }
