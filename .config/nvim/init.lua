@@ -561,6 +561,7 @@ require('lazy').setup({
         'gitcommit',
         'gitignore',
         'go',
+        'go',
         'heex',
         'html',
         'htmldjango',
@@ -571,10 +572,10 @@ require('lazy').setup({
         'luap',
         'make',
         'markdown',
-        'requirements',
         'puppet',
         'python',
         'regex',
+        'requirements',
         'toml',
         'vim',
         'vimdoc',
@@ -589,7 +590,7 @@ require('lazy').setup({
         --  the list of additional_vim_regex_highlighting and disabled languages for indent.
         additional_vim_regex_highlighting = { 'ruby' },
       },
-      indent = { enable = true, disable = { 'ruby' } },
+      indent = { enable = true, disable = { 'ruby', 'python' } },
     },
     config = function(_, opts)
       -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
@@ -633,7 +634,7 @@ require('lazy').setup({
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'black' })
 vim.api.nvim_set_hl(0, 'Comment', { fg = '#44aaff', italic = true })
 vim.api.nvim_set_hl(0, 'DiagnosticUnnecessary', { fg = '#FF3300', italic = true })
-vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = 'yellow' })
+vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = 'red', bg = 'yellow' })
 vim.api.nvim_set_hl(0, 'LineNr', { fg = 'orange' })
 
 vim.api.nvim_create_autocmd('ModeChanged', {
@@ -642,7 +643,7 @@ vim.api.nvim_create_autocmd('ModeChanged', {
 })
 vim.api.nvim_create_autocmd('ModeChanged', {
   pattern = 'i:*',
-  command = 'hi CursorLine guibg=#292e44',
+  command = 'hi CursorLine guifg=yellow guibg=#334455',
 })
 
 vim.opt.autoread = true

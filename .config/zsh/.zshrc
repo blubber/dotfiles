@@ -18,3 +18,6 @@ fi
 
 alias gs="git status"
 alias gc="git commit"
+alias t=tmux-sessionizer
+
+export PATH="~/.local/bin:$PATH"
