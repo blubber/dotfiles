@@ -634,7 +634,6 @@ require('lazy').setup({
 vim.api.nvim_set_hl(0, 'Normal', { bg = 'black' })
 vim.api.nvim_set_hl(0, 'Comment', { fg = '#44aaff', italic = true })
 vim.api.nvim_set_hl(0, 'DiagnosticUnnecessary', { fg = '#FF3300', italic = true })
-vim.api.nvim_set_hl(0, 'CursorLineNr', { fg = 'red', bg = 'yellow' })
 vim.api.nvim_set_hl(0, 'LineNr', { fg = 'orange' })
 
 vim.api.nvim_create_autocmd('ModeChanged', {

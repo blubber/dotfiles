@@ -19,5 +19,8 @@ fi
 alias gs="git status"
 alias gc="git commit"
 alias t=tmux-sessionizer
+alias man="man -P 'col -b | nvim -'"
 
-export PATH="~/.local/bin:$PATH"
+export PATH="${HOME}/.local/bin:$PATH"
+
+export PAGER="nvim -"

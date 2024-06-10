@@ -1,0 +1,6 @@
+#!/bin/bash
+
+file=$(mktemp)
+tmux capture-pane -pS -32768 > $file
+sed -i '' -e :a -e '/./,$!d;/^\n*$/{$d;N;};/\n$/ba' $file
+tmux new-window -n:mywindow "nvim '+ normal G zz' $file; rm $file"

@@ -14,18 +14,18 @@ local vox_config = {
     special_char_voice = 'special',
   },
 
-  postprocess = function(utterances)
-    local result = {}
-    local ft = vim.bo.filetype
-
-    for _, u in ipairs(utterances) do
-      if ft == 'help' or not (u.event.type == 'CursorMoved' and u.source == 'line') then
-        table.insert(result, u)
-      end
-    end
-
-    return result
-  end,
+  -- postprocess = function(utterances)
+  --   local result = {}
+  --   local ft = vim.bo.filetype
+  --
+  --   for _, u in ipairs(utterances) do
+  --     if ft == 'help' or not (u.event.type == 'CursorMoved' and u.source == 'line') then
+  --       table.insert(result, u)
+  --     end
+  --   end
+  --
+  --   return result
+  -- end,
 }
 require('vox').setup(vox_config)
 
