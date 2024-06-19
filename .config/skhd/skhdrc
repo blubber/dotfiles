@@ -1,0 +1,22 @@
+ctrl + alt + cmd - r : yabai --stop-service && yabai --start-service; skhd --reload
+
+
+cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+
+
+alt - k : yabai -m window --focus stack.next || yabai -m window --focus stack.first
+alt - j : yabai -m window --focus stack.prev || yabai -m window --focus stack.last
+
+shift + alt - h : yabai -m window --display prev; yabai -m display --focus prev
+shift + alt - l : yabai -m window --display next; yabai -m display --focus next
+
+ctrl + alt - h : yabai -m window --space prev; yabai -m space --focus next
+ctrl + alt - l : yabai -m window --space next; yabai -m space --focus next
+
+hyper - l : false
+
+alt - 1 : yabai -m space --focus 1
+alt - 2 : yabai -m space --focus 2
+alt - 3 : yabai -m space --focus 3
+alt - 4 : yabai -m space --focus 4
+alt - 5 : yabai -m space --focus 5

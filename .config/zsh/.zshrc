@@ -24,3 +24,5 @@ alias man="man -P 'col -b | nvim -'"
 export PATH="${HOME}/.local/bin:$PATH"
 
 export PAGER="nvim -"
+
+echo "RC"

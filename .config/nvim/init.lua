@@ -30,7 +30,7 @@ vim.opt.signcolumn = 'yes'
 vim.opt.updatetime = 250
 
 -- Decrease mapped sequence wait time
-vim.opt.timeoutlen = 300
+vim.opt.timeoutlen = 500
 
 -- Configure how new splits should be opened
 vim.opt.splitright = true
@@ -513,16 +513,17 @@ require('lazy').setup({
   },
 
   {
-    'folke/tokyonight.nvim',
+    -- 'folke/tokyonight.nvim',
+    'sainnhe/sonokai',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- Load the colorscheme here.
       -- Like many other themes, this one has different styles, and you could load
       -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
       -- vim.cmd.colorscheme 'tokyonight-night'
+      -- vim.cmd.colorscheme 'sonokai'
 
       -- You can configure highlights by doing something like:
-      vim.cmd.hi 'Comment gui=none'
     end,
   },
 
@@ -650,5 +651,8 @@ vim.api.nvim_create_autocmd('CursorHold', {
   pattern = '*',
   command = 'checktime',
 })
+
+vim.keymap.set('n', '<C-j>', '<cmd>cnext<CR>')
+vim.keymap.set('n', '<C-k>', '<cmd>cprev<CR>')
 
 -- vim: ts=2 sts=2 sw=2 et
