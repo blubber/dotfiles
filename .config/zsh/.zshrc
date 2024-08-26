@@ -10,11 +10,13 @@ _fzf_compgen_dir() {
 
 eval "$(fzf --zsh)"
 
-if type brew &>/dev/null; then
-	FPATH=$(brew --prefix)/share/zsh-completions:$FPATH
-	autoload -Uz compinit
-	compinit
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+  autoload -Uz compinit
+  compinit
 fi
+
 
 alias gs="git status"
 alias gc="git commit"
