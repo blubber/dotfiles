@@ -644,7 +644,7 @@ vim.api.nvim_create_autocmd('ModeChanged', {
 })
 vim.api.nvim_create_autocmd('ModeChanged', {
   pattern = 'i:*',
-  command = 'hi CursorLine guifg=yellow guibg=#334455',
+  command = 'hi CursorLine guibg=#334455',
 })
 
 vim.opt.autoread = true
