@@ -514,15 +514,15 @@ require('lazy').setup({
 
   {
     -- 'folke/tokyonight.nvim',
-    -- 'sainnhe/sonokai',
-    'folke/tokyonight.nvim',
+    'sainnhe/sonokai',
+    -- 'folke/tokyonight.nvim',
+    -- 'miikanissi/modus-themes.nvim',
     priority = 1000, -- Make sure to load this before all the other start plugins.
     init = function()
       -- Load the colorscheme here.
-      -- Like many other themes, this one has different styles, and you could load
-      -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      vim.cmd.colorscheme 'tokyonight-night'
-      -- vim.cmd.colorscheme 'sonokai'
+      -- vim.cmd.colorscheme 'tokyonight-night'
+      vim.cmd.colorscheme 'sonokai'
+      -- vim.cmd.colorscheme = 'modus_vivendi'
 
       -- You can configure highlights by doing something like:
     end,
@@ -644,7 +644,7 @@ vim.api.nvim_create_autocmd('ModeChanged', {
 })
 vim.api.nvim_create_autocmd('ModeChanged', {
   pattern = 'i:*',
-  command = 'hi CursorLine guibg=#334455',
+  command = 'hi CursorLine guibg=#333300',
 })
 
 vim.opt.autoread = true

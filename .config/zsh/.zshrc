@@ -18,8 +18,15 @@ then
 fi
 
 
+function git_branch {
+  b=$(git branch --no-color --no-column --format '%(refname:short)' | less | fzf); test $? -eq 0 && git checkout $b
+}
+
+
 alias gs="git status"
 alias gc="git commit"
+alias gb="git_branch"
+
 alias t=tmux-sessionizer
 alias man="man -P 'col -b | nvim -'"
 

@@ -1,5 +1,6 @@
 add_newline = false
 format = """
+$python\
 $directory\
 $git_branch\
 $git_commit\
@@ -20,3 +21,6 @@ format = "[$symbol$branch]($style) "
 style = "bold fg:blue"
 truncation_length = 12
 truncation_symbol = "_"
+
+[python]
+format = '[(${version} )(\($virtualenv\) )]($style)'

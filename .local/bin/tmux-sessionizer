@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/src -type d -depth 1 | fzf)
+    selected=$(fd . ~/src -td -d1 | fzf)
 fi
 
 if [[ -z $selected ]]; then
