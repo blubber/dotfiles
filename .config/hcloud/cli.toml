@@ -1,0 +1,5 @@
+active_context = "replicator-rations"
+
+[[contexts]]
+  name = "replicator-rations"
+  token = "A3BG6jeRsqQUYsKylb5D20YSHXx5VszaPV4I34hpmTGDK1GwLYSokFoudch7LrJj"

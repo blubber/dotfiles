@@ -68,3 +68,10 @@ function cd {
 
 
 _auto_venv
+
+
+export PGHOST=127.0.0.1
+export PGUSER=postgres
+export PGPASSWORD=postgres
+
+alias pgstart="docker start pg || docker run -d --rm --name pg -e POSTGRES_PASSWORD=$PGPASSWORD -v ~/.pgdata:/var/lib/postgresql/data -p '127.0.0.1:5432:5432' postgres:16"
