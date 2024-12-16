@@ -31,8 +31,8 @@ alt-comma = 'layout accordion vertical'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#focus
 alt-h = 'focus left'
-alt-j = 'focus down'
-alt-k = 'focus up'
+alt-j = 'focus --boundaries-action wrap-around-the-workspace down'
+alt-k = 'focus --boundaries-action wrap-around-the-workspace up'
 alt-l = 'focus right'
 
 alt-shift-h = 'move left'
