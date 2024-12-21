@@ -523,7 +523,7 @@ require('lazy').setup({
     init = function()
       -- Load the colorscheme here.
       -- vim.cmd.colorscheme 'tokyonight-night'
-      vim.cmd.colorscheme 'sonokai'
+      -- vim.cmd.colorscheme 'sonokai'
       -- vim.cmd.colorscheme = 'modus_vivendi'
 
       -- You can configure highlights by doing something like:
@@ -646,7 +646,7 @@ vim.api.nvim_create_autocmd('ModeChanged', {
 })
 vim.api.nvim_create_autocmd('ModeChanged', {
   pattern = 'i:*',
-  command = 'hi CursorLine guibg=#333300',
+  command = 'hi CursorLine guibg=#555555',
 })
 
 vim.opt.autoread = true
