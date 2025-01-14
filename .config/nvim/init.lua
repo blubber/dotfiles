@@ -4,6 +4,9 @@
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
+-- Ensure 24bit colors
+vim.opt.termguicolors = true
+
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = false
 
@@ -12,6 +15,9 @@ vim.opt.number = true
 
 vim.opt.mouse = ''
 vim.opt.showmode = false
+
+-- Highlight some columns
+vim.opt.colorcolumn = '50,78,99'
 
 -- Enable break indent
 vim.opt.breakindent = true
@@ -405,6 +411,7 @@ require('lazy').setup({
         lua = { 'stylua' },
         python = { 'ruff_organize_imports', 'ruff_format' },
         elixir = { 'mix' },
+        javascript = { 'prettier' },
       },
     },
   },
@@ -612,7 +619,7 @@ require('lazy').setup({
   },
 
   require 'kickstart.plugins.debug',
-  require 'kickstart.plugins.indent_line',
+  -- require 'kickstart.plugins.indent_line',
   require 'kickstart.plugins.lint',
   { import = 'custom.plugins' },
 }, {
@@ -657,5 +664,8 @@ vim.api.nvim_create_autocmd('CursorHold', {
 
 vim.keymap.set('n', '<C-j>', '<cmd>cnext<CR>')
 vim.keymap.set('n', '<C-k>', '<cmd>cprev<CR>')
+
+-- Set column color
+vim.cmd.hi 'colorcolumn guibg=#333333'
 
 -- vim: ts=2 sts=2 sw=2 et

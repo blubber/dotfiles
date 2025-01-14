@@ -1,0 +1,21 @@
+theme = IR_Black
+font-size = 28
+cursor-style = block
+cursor-color = #00ff00
+cursor-text = #fff
+cursor-opacity = 1.0
+adjust-cursor-thickness = 3
+font-thicken = true
+background = #000000
+foreground = #dddddd
+minimum-contrast = 5
+command = /opt/homebrew/bin/tmux new-session -A -s main
+window-inherit-working-directory = true
+window-inherit-font-size = true
+macos-titlebar-style = hidden
+window-padding-color = background
+window-padding-x = 4
+window-padding-y = 4
+macos-auto-secure-input = true
+macos-secure-input-indication = true
+

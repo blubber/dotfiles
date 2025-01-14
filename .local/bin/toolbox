@@ -1,0 +1,23 @@
+#!/bin/sh
+
+set -eu
+
+DOCKER=/usr/local/bin/docker
+NAME=toolbox
+IMAGE=toolbox
+
+
+if $DOCKER ps -a --format '{{.Names}}' | grep -q "^$NAME$"; then
+	$DOCKER exec -it "$NAME" tmux new-session -A -s main
+else
+	$DOCKER rm $NAME 2> /dev/null || true
+	$DOCKER run \
+		-it --name $NAME \
+		-v "$HOME/src:/home/tiemo/src" \
+		-v "$HOME/Workspace:/home/tiemo/Workspace" \
+		-v "$HOME/Downloads:/home/tiemo/Downloads" \
+		-v "$HOME/Documents:/home/tiemo/Documents" \
+		-v "/var/run/docker.sock:/var/run/docker.sock" \
+		-v "/home/tiemo/.pyenv" \
+		$IMAGE
+fi
