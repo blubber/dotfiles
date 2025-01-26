@@ -11,6 +11,7 @@ return {
       vim.cmd.hi 'CursorLine guibg=none gui=underline'
       vim.cmd.hi 'LineNr guifg=#ff9e64 gui=none'
       vim.cmd.hi 'CursorLineNr gui=bold guifg=#ffff44'
+      vim.cmd.hi 'DiagnosticUnnecessary guibg=none gui=italic guifg=#cc9922'
 
       vim.api.nvim_create_autocmd('ModeChanged', {
         pattern = '*:i',

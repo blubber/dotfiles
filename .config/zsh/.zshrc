@@ -20,42 +20,6 @@ export PATH="${HOME}/.local/bin:$PATH"
 export PAGER="nvim -"
 export EDITOR="nvim"
 
-
-function _auto_venv {
-  dirname=$(realpath $PWD)
-  homedir=$(realpath $HOME)
-
-  while [[ "$dirname" == "$homedir/"* ]]; do
-    venvdir="$dirname/venv"
-
-    if [[ -d "$venvdir" ]]; then
-      export VENV_ROOT="$dirname"
-      . "$venvdir/bin/activate"
-      return
-    fi
-
-    dirname=$(dirname "$dirname")
-  done
-}
-
-function cd {
-  builtin cd "$@" || return
-
-  dirname=$(realpath $PWD)
-  homedir=$(realpath $HOME)
-
-  if [[ -z "$VENV_ROOT" ]]; then
-    _auto_venv
-  elif [[ "$dirname" != "$VENV_ROOT/"* ]]; then
-    deactivate
-    unset VENV_ROOT
-  fi
-}
-
-
-_auto_venv
-
-
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"

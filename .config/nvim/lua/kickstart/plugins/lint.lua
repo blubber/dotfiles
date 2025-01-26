@@ -9,6 +9,7 @@ return {
         markdown = { 'markdownlint' },
         dockerfile = { 'hadolint' },
         json = { 'jsonlint' },
+        -- python = { 'mypy' },
       }
 
       local lint_augroup = vim.api.nvim_create_augroup('lint', { clear = true })

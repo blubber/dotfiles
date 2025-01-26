@@ -109,7 +109,15 @@ return {
       -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
       local servers = {
         gopls = {},
-        pyright = {},
+        pylsp = {
+          settings = {
+            pylsp = {
+              plugins = {
+                pycodestyle = { enabled = false },
+              },
+            },
+          },
+        },
         lua_ls = {
           settings = {
             Lua = {

@@ -1,0 +1,4 @@
+ls
+docker ps
+docker ps | detect columns 
+ls
