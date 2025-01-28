@@ -102,3 +102,7 @@ run = ['layout floating']
 [[on-window-detected]]
 if.app-name-regex-substring = '.*battle\.net.*'
 run = ['layout floating']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = ['layout floating']
