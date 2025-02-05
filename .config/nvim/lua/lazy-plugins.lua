@@ -12,6 +12,8 @@ require('lazy').setup({
   require 'kickstart/plugins/treesitter',
   require 'kickstart.plugins.lint',
   require 'kickstart.plugins.autopairs',
+  -- require 'kickstart.plugins.copilot',
+  require 'kickstart.plugins.gen',
 
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   -- { import = 'custom.plugins' },
