@@ -4,11 +4,9 @@ cursor-style = block
 cursor-text = #fff
 cursor-opacity = 1.0
 adjust-cursor-thickness = 3
-font-thicken = true
 command = /opt/homebrew/bin/tmux new-session -A -s main
 window-inherit-working-directory = true
 window-inherit-font-size = true
-macos-titlebar-style = hidden
 macos-auto-secure-input = true
 macos-secure-input-indication = true
-
+font-feature = -calt

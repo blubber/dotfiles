@@ -22,9 +22,19 @@ outer.bottom = 0
 outer.top = 0
 outer.right = 0
 
+
 # 'main' binding mode declaration
 [mode.main.binding]
 # All possible commands: https://nikitabobko.github.io/AeroSpace/commands
+
+cmd-h = [] # Disable "hide application"
+cmd-alt-h = [] # Disable "hide others"
+
+alt-esc = '''exec-and-forget osascript -e '
+tell application "System Events"
+    key code 53 using {command down}
+end tell'
+'''
 
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion vertical'
@@ -79,6 +89,7 @@ alt-shift-h = ['join-with left', 'mode main']
 alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
+
 
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'

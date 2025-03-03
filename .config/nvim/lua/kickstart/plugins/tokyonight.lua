@@ -21,14 +21,14 @@ return {
         pattern = 'i:*',
         command = 'hi CursorLine gui=underline',
       })
-      vim.api.nvim_create_autocmd('ModeChanged', {
-        pattern = '*:i',
-        command = 'hi Whitespace guibg=#442200',
-      })
-      vim.api.nvim_create_autocmd('ModeChanged', {
-        pattern = 'i:*',
-        command = 'hi Whitespace guibg=#cc5500',
-      })
+      -- vim.api.nvim_create_autocmd('ModeChanged', {
+      --   pattern = '*:i',
+      --   command = 'hi Whitespace guibg=#442200',
+      -- })
+      -- vim.api.nvim_create_autocmd('ModeChanged', {
+      --   pattern = 'i:*',
+      --   command = 'hi Whitespace guibg=#cc5500',
+      -- })
     end,
   },
 }

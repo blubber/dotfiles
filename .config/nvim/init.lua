@@ -13,4 +13,12 @@ require 'keymaps'
 require 'lazy-bootstrap'
 require 'lazy-plugins'
 
+vim.api.nvim_create_autocmd({ 'BufEnter', 'CursorHold', 'CursorHoldI' }, {
+  callback = function()
+    if vim.fn.mode() ~= 'c' then
+      vim.cmd 'checktime'
+    end
+  end,
+})
+
 -- vim: ts=2 sts=2 sw=2 et
