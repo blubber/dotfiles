@@ -10,3 +10,4 @@ window-inherit-font-size = true
 macos-auto-secure-input = true
 macos-secure-input-indication = true
 font-feature = -calt
+maximize = true

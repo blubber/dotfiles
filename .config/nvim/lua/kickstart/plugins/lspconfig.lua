@@ -80,6 +80,7 @@ return {
         end,
       })
 
+      vim.diagnostic.config { virtual_text = true }
       -- Change diagnostic symbols in the sign column (gutter)
       -- if vim.g.have_nerd_font then
       --   local signs = { ERROR = '', WARN = '', INFO = '', HINT = '' }
