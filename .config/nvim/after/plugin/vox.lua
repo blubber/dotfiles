@@ -1,40 +1,32 @@
 vim.opt.runtimepath:append '/Users/tiemo/src/vox.nvim'
 
-local backend = require 'vox.backend'
+local vox = require 'vox'
 
-local vox_config = {
-  backend = backend.setup {
+vox.setup {
+  backend = require('vox.voxd_backend').setup {
     routing = {
-      lnum = 'fast',
+      linenr = 'fast',
       line = 'medium',
-      text = 'medium',
-      virt_text = 'slow',
+      diagnostic = 'medium',
       meta = 'fast',
+      special = 'fast',
+      ['special.open'] = 'open',
+      ['special.close'] = 'close',
     },
-    special_char_voice = 'special',
   },
-
-  -- postprocess = function(utterances)
-  --   local result = {}
-  --   local ft = vim.bo.filetype
-  --
-  --   for _, u in ipairs(utterances) do
-  --     if ft == 'help' or not (u.event.type == 'CursorMoved' and u.source == 'line') then
-  --       table.insert(result, u)
-  --     end
-  --   end
-  --
-  --   return result
-  -- end,
 }
-require('vox').setup(vox_config)
 
-vim.api.nvim_create_user_command('VoxReload', function()
-  for k, _ in pairs(package.loaded) do
-    if string.match(k, '^vox') ~= nil then
-      package.loaded[k] = nil
-    end
-  end
+local function map(key, nodes)
+  vim.keymap.set({ 'n', 'i' }, string.format('<C-s>%s', key), function()
+    vox.speak(nodes)
+  end)
+end
 
-  require('vox').setup(vox_config)
-end, {})
+map('d', { vox.diagnostics })
+map('f', { vox.filename })
+
+vim.keymap.set('n', 'w', function()
+  vim.api.nvim_feedkeys('w', 'n', false)
+  vox.suspend()
+  vox.speak(vox.word())
+end, { noremap = true, silent = true })

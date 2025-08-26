@@ -38,3 +38,23 @@ esac
 
 source "$HOME/.config/zsh/aliases"
 source "$HOME/.config/zsh/pg"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/tiemo/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
+
+precmd() {
+
+    local EXIT_STATUS=$?
+    SUCCESS_SOUND="/System/Library/Sounds/Funk.aiff"
+    ERROR_SOUND="/System/Library/Sounds/Sosumi.aiff"
+
+    if [ $EXIT_STATUS -eq 0 ]; then
+        afplay -v 2 "$SUCCESS_SOUND" > /dev/null 2>&1 &!
+    else
+      afplay -v 2 "$ERROR_SOUND" > /dev/null 2>&1 &!
+
+    fi
+}
+

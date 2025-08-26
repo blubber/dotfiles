@@ -4,6 +4,7 @@
 		"slow": { "rate": 1.35, "pitch": 0.9 },
 		"medium": { "rate":1.45},
 		"fast": { "rate":1.9},
-		"special": { "rate": 1.8, "pitch": 1.4 }
+		"open": { "rate": 1.7, "pitch": 1.4 },
+		"close": { "rate": 1.7, "pitch": 0.6 }
 	}
 }

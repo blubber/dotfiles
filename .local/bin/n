@@ -1,0 +1,14 @@
+#!/bin/sh
+
+SUCCESS_SOUND="/System/Library/Sounds/Funk.aiff"
+ERROR_SOUND="/System/Library/Sounds/Sosumi.aiff"
+
+"$@"
+
+EXIT_STATUS=$?
+
+if [ $EXIT_STATUS -eq 0 ]; then
+  afplay -v 2 "$SUCCESS_SOUND" &
+else
+  afplay -v 2 "$ERROR_SOUND" &
+fi
