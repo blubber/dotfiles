@@ -1,14 +1,19 @@
 #!/usr/bin/env bash
 
+DIRS=(
+    "$HOME/src"
+    "$HOME/dotfiles/.config"
+)
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(fd . ~/src -td -d1 | fzf)
+    selected=$(find "${DIRS[@]}"  -type d -maxdepth 1 \
+        | sed "s|^$HOME/||" \
+        | fzf --margin 10%)
+    [[ $selected ]] && selected="$HOME/$selected"
 fi
 
-if [[ -z $selected ]]; then
-    exit 0
-fi
+[[ ! $selected ]] && exit 0
 
 selected_name=$(basename "$selected" | tr . _)
 tmux_running=$(pgrep tmux)
