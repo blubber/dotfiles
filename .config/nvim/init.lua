@@ -71,7 +71,7 @@ rtp:prepend(lazypath)
 require('lazy').setup({
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
 
-  {                            -- Adds git related signs to the gutter, as well as utilities for managing changes
+  { -- Adds git related signs to the gutter, as well as utilities for managing changes
     'lewis6991/gitsigns.nvim',
     opts = {
       signs = {
@@ -105,7 +105,7 @@ require('lazy').setup({
       { 'nvim-telescope/telescope-ui-select.nvim' },
 
       -- Useful for getting pretty icons, but requires a Nerd Font.
-      { 'nvim-tree/nvim-web-devicons',            enabled = vim.g.have_nerd_font },
+      { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
     },
     config = function()
       require('telescope').setup {
@@ -173,7 +173,7 @@ require('lazy').setup({
       { 'mason-org/mason.nvim', opts = {} },
       { 'mason-org/mason-lspconfig.nvim', opts = {} },
       'WhoIsSethDaniel/mason-tool-installer.nvim',
-      { 'j-hui/fidget.nvim',    opts = {} },
+      { 'j-hui/fidget.nvim', opts = {} },
 
       'saghen/blink.cmp',
     },
@@ -659,5 +659,8 @@ require('lazy').setup({
 
 vim.cmd.hi 'Normal guibg=black guifg=whit'
 vim.cmd.hi 'Comment guifg=#aaaaff'
+
+vim.keymap.set('n', '<C-j>', '<cmd>cnext<CR>zz', { desc = 'Next quickfix item' })
+vim.keymap.set('n', '<C-k>', '<cmd>cprev<CR>zz', { desc = 'Previous quickfix item' })
 
 -- vim: ts=2 sts=2 sw=2 et

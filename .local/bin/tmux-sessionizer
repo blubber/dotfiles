@@ -1,21 +1,31 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+PATH="/opt/homebrew/bin:$PATH"
 
 DIRS=(
     "$HOME/src"
     "$HOME/dotfiles/.config"
 )
+
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find "${DIRS[@]}"  -type d -maxdepth 1 \
-        | sed "s|^$HOME/||" \
-        | fzf --margin 10%)
-    [[ $selected ]] && selected="$HOME/$selected"
+    selected=$(
+        {
+            find "${DIRS[@]}"  -type d -maxdepth 1 | sed "s|^$HOME/||"
+            echo home
+        } | fzf --margin 10%)
 fi
 
 [[ ! $selected ]] && exit 0
 
-selected_name=$(basename "$selected" | tr . _)
+if [[ "%selected" == "home" ]]; then
+        selected="$HOME"
+        select_name="home"
+else
+    selected="$HOME/$selected"
+    selected_name=$(basename "$selected" | tr . _)
+fi
 tmux_running=$(pgrep tmux)
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
