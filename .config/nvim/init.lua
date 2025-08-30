@@ -13,6 +13,9 @@ vim.o.expandtab = true
 vim.o.ts = 4
 vim.o.sw = 4
 
+vim.opt.swapfile = false
+vim.opt.undofile = true
+
 vim.o.breakindent = true
 
 vim.o.undofile = true

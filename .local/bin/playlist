@@ -1,11 +1,17 @@
-#!/bin/bash
+i#!/bin/bash
 playlist=$(osascript -e 'tell application "Music" to get name of playlists' \
   | tr ',' '\n' \
   | sed 's/^ *//;s/ *$//' \
   | fzf)
 
 if [ -n "$playlist" ]; then
-  osascript -e 'tell application "Music" to set shuffle enabled to true'
-  osascript -e 'tell application "Music" to set shuffle mode to songs'
-  osascript -e "tell application \"Music\" to play playlist \"${playlist}\""
+  osascript -e "
+    tell application \"Music\"
+      set shuffle enabled to true
+      set shuffle mode to songs
+      play track 1 of playlist \"${playlist}\"
+      set newQueue to every track of playlist \"${playlist}\"
+      set queue of player to newQueue
+    end tell
+  "
 fi

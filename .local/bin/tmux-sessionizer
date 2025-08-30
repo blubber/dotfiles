@@ -4,6 +4,7 @@ PATH="/opt/homebrew/bin:$PATH"
 
 DIRS=(
     "$HOME/src"
+    "$HOME/Workspace"
     "$HOME/dotfiles/.config"
 )
 
