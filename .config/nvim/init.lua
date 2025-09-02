@@ -417,9 +417,10 @@ require('lazy').setup({
         end
       end,
       formatters_by_ft = {
-        lua = { 'stylua' },
-        python = { 'ruff' },
         javascript = { 'prettierd', 'prettier', stop_after_first = true },
+        lua = { 'stylua' },
+        python = { 'isort', 'ruff' },
+        vue = { 'prettierd', 'prettier', stop_after_first = true },
       },
     },
   },
