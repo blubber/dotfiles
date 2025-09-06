@@ -318,7 +318,6 @@ require('lazy').setup({
       local servers = {
         gopls = {},
         pyright = {},
-        elixirls = {},
         vtsls = {
           settings = {
             vtsls = {
@@ -341,6 +340,7 @@ require('lazy').setup({
         },
 
         vuels = {},
+        expert = {},
         lua_ls = {
           -- cmd = { ... },
           -- filetypes = { ... },
@@ -417,10 +417,17 @@ require('lazy').setup({
         end
       end,
       formatters_by_ft = {
+        css = { 'prettierd', 'prettier', stop_after_first = true },
+        elixir = { 'mix' },
+        html = { 'prettierd', 'prettier', stop_after_first = true },
         javascript = { 'prettierd', 'prettier', stop_after_first = true },
+        json = { 'prettierd', 'prettier', stop_after_first = true },
         lua = { 'stylua' },
+        markdown = { 'prettierd', 'prettier', stop_after_first = true },
         python = { 'isort', 'ruff' },
+        typescript = { 'prettierd', 'prettier', stop_after_first = true },
         vue = { 'prettierd', 'prettier', stop_after_first = true },
+        yaml = { 'prettierd', 'prettier', stop_after_first = true },
       },
     },
   },
