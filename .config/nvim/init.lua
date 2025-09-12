@@ -106,9 +106,6 @@ require('lazy').setup({
         end,
       },
       { 'nvim-telescope/telescope-ui-select.nvim' },
-
-      -- Useful for getting pretty icons, but requires a Nerd Font.
-      { 'nvim-tree/nvim-web-devicons', enabled = vim.g.have_nerd_font },
     },
     config = function()
       require('telescope').setup {
@@ -256,7 +253,8 @@ require('lazy').setup({
         json = { 'prettierd', 'prettier', stop_after_first = true },
         lua = { 'stylua' },
         markdown = { 'prettierd', 'prettier', stop_after_first = true },
-        python = { 'isort', 'ruff' },
+        python = { 'ruff_fix', 'ruff_organize_imports', 'ruff_format' },
+        sql = { 'sql_formatter' },
         typescript = { 'prettierd', 'prettier', stop_after_first = true },
         vue = { 'prettierd', 'prettier', stop_after_first = true },
         yaml = { 'prettierd', 'prettier', stop_after_first = true },
@@ -274,26 +272,26 @@ require('lazy').setup({
         'L3MON4D3/LuaSnip',
         version = '2.*',
         build = (function()
-          -- Build Step is needed for regex support in snippets.
-          -- This step is not supported in many windows environments.
-          -- Remove the below condition to re-enable on windows.
           if vim.fn.has 'win32' == 1 or vim.fn.executable 'make' == 0 then
             return
           end
           return 'make install_jsregexp'
         end)(),
-        dependencies = {
-          -- `friendly-snippets` contains a variety of premade snippets.
-          --    See the README about individual language/framework/plugin snippets:
-          --    https://github.com/rafamadriz/friendly-snippets
-          -- {
-          --   'rafamadriz/friendly-snippets',
-          --   config = function()
-          --     require('luasnip.loaders.from_vscode').lazy_load()
-          --   end,
-          -- },
-        },
-        opts = {},
+        opts = { enable_autosnippets = true },
+        config = function(_, opts)
+          require('luasnip.loaders.from_lua').load { paths = '~/.config/nvim/snippets/' }
+          require('luasnip').config.setup(opts)
+          local ls = require 'luasnip'
+          vim.keymap.set('i', '<c-e>', function()
+            ls.expand_or_jump()
+          end, { silent = true })
+          vim.keymap.set({ 'i', 's' }, '<c-j>', function()
+            ls.jump(1)
+          end, { silent = true })
+          vim.keymap.set({ 'i', 's' }, '<c-k>', function()
+            ls.jump(-1)
+          end, { silent = true })
+        end,
       },
       'folke/lazydev.nvim',
     },
@@ -309,17 +307,6 @@ require('lazy').setup({
         -- 'enter' for enter to accept
         -- 'none' for no mappings
         --
-        -- For an understanding of why the 'default' preset is recommended,
-        -- you will need to read `:help ins-completion`
-        --
-        -- No, but seriously. Please read `:help ins-completion`, it is really good!
-        --
-        -- All presets have the following mappings:
-        -- <tab>/<s-tab>: move to right/left of your snippet expansion
-        -- <c-space>: Open menu or open docs if already open
-        -- <c-n>/<c-p> or <up>/<down>: Select next/previous item
-        -- <c-e>: Hide menu
-        -- <c-k>: Toggle signature help
         --
         -- See :h blink-cmp-config-keymap for defining your own keymap
         preset = 'default',
@@ -503,7 +490,7 @@ require('lazy').setup({
 vim.cmd.hi 'Normal guibg=black guifg=whit'
 vim.cmd.hi 'Comment guifg=#aaaaff'
 
-vim.keymap.set('n', '<C-j>', '<cmd>cnext<CR>zz', { desc = 'Next quickfix item' })
-vim.keymap.set('n', '<C-k>', '<cmd>cprev<CR>zz', { desc = 'Previous quickfix item' })
+vim.keymap.set('n', '<c-d>', '<c-d>zz')
+vim.keymap.set('n', '<c-u>', '<c-u>zz')
 
 -- vim: ts=2 sts=2 sw=2 et

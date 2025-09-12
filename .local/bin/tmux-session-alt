@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [[ ! -f /tmp/tmux-session-alt ]]; then
+    exit 1;
+fi
+
+session=$(cat /tmp/tmux-session-alt)
+$HOME/.local/bin/tmux-sessionizer $session

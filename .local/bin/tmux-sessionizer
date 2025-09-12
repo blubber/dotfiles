@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 PATH="/opt/homebrew/bin:$PATH"
 
 DIRS=(
@@ -27,11 +28,19 @@ else
     selected="$HOME/$selected"
     selected_name=$(basename "$selected" | tr . _)
 fi
+
 tmux_running=$(pgrep tmux)
+
 
 if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
     tmux new-session -s $selected_name -c $selected
     exit 0
+fi
+
+lt=$(printf %s "$(tmux display-messagv -p '#S')")
+
+if [[ "$selected_name" != "$alt" ]]; then
+    echo -n "$alt" > /tmp/tmux-session-alt
 fi
 
 if ! tmux has-session -t=$selected_name 2> /dev/null; then
