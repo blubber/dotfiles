@@ -2,7 +2,7 @@
 
 return {
   s(
-    { trig = 'def', snippetType = 'autosnippet' },
+    { trig = 'pdef', snippetType = 'autosnippet' },
     fmt(
       [[
         def {}({}) -> {}:
@@ -18,7 +18,7 @@ return {
   ),
 
   s(
-    { trig = 'if', snippetType = 'autosnippet' },
+    { trig = 'pif', snippetType = 'autosnippet' },
     fmta(
       [[
         if <>:
@@ -32,7 +32,7 @@ return {
   ),
 
   s(
-    { trig = 'try', snippetType = 'autosnippet' },
+    { trig = 'ptry', snippetType = 'autosnippet' },
     fmta(
       [[
         try:

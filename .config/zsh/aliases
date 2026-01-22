@@ -17,3 +17,6 @@ alias kc="k8s_context"
 alias t=tmux-sessionizer
 alias man="man -P 'col -b | nvim -'"
 alias vim="nvim"
+
+alias m='mpv --volume=73 *'
+alias ms='mpv --volume=70 --shuffle *'

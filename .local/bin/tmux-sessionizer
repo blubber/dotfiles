@@ -37,7 +37,7 @@ if [[ -z $TMUX ]] && [[ -z $tmux_running ]]; then
     exit 0
 fi
 
-lt=$(printf %s "$(tmux display-messagv -p '#S')")
+lt=$(printf %s "$(tmux display-message -p '#S')")
 
 if [[ "$selected_name" != "$alt" ]]; then
     echo -n "$alt" > /tmp/tmux-session-alt
@@ -48,7 +48,7 @@ if ! tmux has-session -t=$selected_name 2> /dev/null; then
 fi
 
 if [[ -z $TMUX ]]; then
-    tmux attach-session -t $selected_name
+    echo tmux attach-session -t $selected_name
 else
     tmux switch-client -t $selected_name
 fi

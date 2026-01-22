@@ -72,6 +72,40 @@ local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
 require('lazy').setup({
+  {
+    'zbirenbaum/copilot.lua',
+    opts = {},
+  },
+  {
+    'yetone/avante.nvim',
+    build = 'make',
+    event = 'VeryLazy',
+    version = false, -- Never set this value to "*"! Never!
+    ---@module 'avante'
+    ---@type avante.Config
+    opts = {
+      instructions_file = 'AGENTS.md',
+      provider = 'copilot',
+      providers = {
+        copilot = {
+          model = 'claude-opus-4.5',
+        },
+      },
+      behaviour = {
+        -- Set this to false to force the diff review stage
+        enable_fastapply = false,
+        -- Ensure this is false so changes don't apply automatically
+        auto_apply_diff_after_generation = false,
+      },
+    },
+    dependencies = {
+      'nvim-lua/plenary.nvim',
+      'MunifTanjim/nui.nvim',
+      --- The below dependencies are optional,
+      'stevearc/dressing.nvim', -- for input provider dressing
+    },
+  },
+
   'NMAC427/guess-indent.nvim', -- Detect tabstop and shiftwidth automatically
 
   { -- Adds git related signs to the gutter, as well as utilities for managing changes
