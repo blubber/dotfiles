@@ -67,15 +67,54 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
   end
 end
 
+local openrouter_model_ids = {
+  'anthropic/claude-sonnet-4.5',
+  'anthropic/claude-opus-4.5',
+  'google/gemini-3-flash-preview',
+  'google/gemini-3-pro-preview',
+  'minimax/minimax-m2.1',
+  'qwen/qwen3-coder',
+  'moonshotai/kimi-k2.5',
+}
+
+local avante_providers = {}
+for _, id in ipairs(openrouter_model_ids) do
+  avante_providers[id] = {
+    __inherited_from = 'openai',
+    endpoint = 'https://openrouter.ai/api/v1',
+    api_key_name = 'cmd:cat ~/.local/share/openrouter-key',
+    model = id,
+    extra_request_body = {
+      temperature = 0.2,
+    },
+  }
+end
+
+local function select_avante_provider()
+  vim.ui.select(openrouter_model_ids, {
+    prompt = 'Select Avante Provider:',
+    format_item = function(item)
+      return item
+    end,
+  }, function(choice)
+    if choice then
+      vim.cmd('AvanteSwitchProvider ' .. choice)
+    end
+  end)
+end
+
+-- Keymaps to trigger provider selection
+vim.keymap.set('n', '<leader>am', select_avante_provider, { desc = '[A]vante [M]odel select' })
+
 ---@type vim.Option
 local rtp = vim.opt.rtp
 rtp:prepend(lazypath)
 
 require('lazy').setup({
-  {
-    'zbirenbaum/copilot.lua',
-    opts = {},
-  },
+  -- {
+  --   'zbirenbaum/copilot.lua',
+  --   opts = {},
+  -- },
   {
     'yetone/avante.nvim',
     build = 'make',
@@ -85,19 +124,11 @@ require('lazy').setup({
     ---@type avante.Config
     opts = {
       instructions_file = 'AGENTS.md',
-      provider = 'copilot',
-      providers = {
-        copilot = {
-          model = 'claude-opus-4.5',
-        },
-      },
-      behaviour = {
-        -- Set this to false to force the diff review stage
-        enable_fastapply = false,
-        -- Ensure this is false so changes don't apply automatically
-        auto_apply_diff_after_generation = false,
-      },
+      provider = 'moonshotai/kimi-k2.5',
+      auto_suggestions_provider = 'moonshotai/kimi-k2.5',
+      providers = avante_providers,
     },
+
     dependencies = {
       'nvim-lua/plenary.nvim',
       'MunifTanjim/nui.nvim',
@@ -450,7 +481,6 @@ require('lazy').setup({
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    main = 'nvim-treesitter.configs', -- Sets main module to use for opts
     -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
       ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },

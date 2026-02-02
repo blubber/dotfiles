@@ -2,23 +2,13 @@
 
 return {
   s(
-    { trig = 'defn', snippetType = 'autosnippet' },
-    fmt(
-      [[
-        def {}({}) do
-            {}
-        end
-        ]],
-      {
-        i(1),
-        i(2),
-        i(3),
-      }
-    )
+    { trig = ';i', snippetType = 'autosnippet' },
+    fmt([[|> IO.inspect(label: "{}")]], {
+      i(1, 'debug_label'),
+    })
   ),
-
   s(
-    { trig = 'handle_info', snippetType = 'autosnippet' },
+    { trig = ';hi', snippetType = 'autosnippet' },
     fmta(
       [[
         def handle_info({<>, <>}, socket) do
@@ -35,7 +25,7 @@ return {
   ),
 
   s(
-    { trig = [[^%s*use%s*:?live_view]], snippetType = 'autosnippet', regTrig = true, wordTrig = false },
+    { trig = ';lv', snippetType = 'autosnippet' },
     fmta(
       [[
         defmodule <>.<>Live do
