@@ -75,6 +75,11 @@ require('lazy').setup({
   {
     'olimorris/codecompanion.nvim',
     version = '^18.0.0',
+    init = function()
+      vim.keymap.set({ 'n', 'v' }, '<C-a>', '<cmd>CodeCompanionActions<cr>', { noremap = true, silent = true })
+      vim.keymap.set({ 'n', 'v' }, '<leader>aa', '<cmd>CodeCompanionChat Toggle<cr>', { noremap = true, silent = true })
+      vim.keymap.set('v', 'ga', '<cmd>CodeCompanionAactions<cr>', { noremap = true, silent = true })
+    end,
     opts = {
       adapters = {
         acp = {
@@ -92,13 +97,11 @@ require('lazy').setup({
                 model = {
                   default = 'claude-haiku-4-5',
                 },
-                thinking = {
-                  mapping = 'parameters',
-                  type = 'table',
-                  default = {
-                    type = 'enabled',
-                    budget_tokens = 1024,
-                  },
+                extended_thinking = {
+                  default = false,
+                },
+                thinking_budget = {
+                  default = 1024,
                 },
               },
             })
@@ -119,17 +122,17 @@ require('lazy').setup({
           end,
         },
       },
+      display = {
+        diff = {
+          enabled = false,
+        },
+      },
       strategies = {
         chat = {
           adapter = 'opencode', -- Use OpenCode for the main chat
         },
         inline = {
           adapter = 'zen',
-          display = {
-            diff = {
-              enabled = false,
-            },
-          },
         },
         agent = {
           adapter = 'opencode', -- Use OpenCode for the @agent tool
@@ -487,10 +490,27 @@ require('lazy').setup({
   { -- Highlight, edit, and navigate code
     'nvim-treesitter/nvim-treesitter',
     build = ':TSUpdate',
-    -- [[ Configure Treesitter ]] See `:help nvim-treesitter`
     opts = {
-      ensure_installed = { 'bash', 'c', 'diff', 'html', 'lua', 'luadoc', 'markdown', 'markdown_inline', 'query', 'vim', 'vimdoc' },
-      -- Autoinstall languages that are not installed
+      ensure_installed = {
+        'bash',
+        'c',
+        'css',
+        'diff',
+        'elixir',
+        'heex',
+        'html',
+        'html',
+        'javascript',
+        'lua',
+        'luadoc',
+        'markdown',
+        'markdown_inline',
+        'python',
+        'query',
+        'typescript',
+        'vim',
+        'vimdoc',
+      },
       auto_install = true,
       highlight = {
         enable = true,
