@@ -87,7 +87,21 @@ require('lazy').setup({
         },
 
         http = {
-          zen = function()
+          zen_codex = function()
+            return require('codecompanion.adapters').extend('openai_responses', {
+              env = {
+                api_key = 'cmd:cat ~/.local/share/zen-key',
+              },
+              url = 'https://opencode.ai/zen/v1/responses',
+              schema = {
+                model = {
+                  default = 'gpt-5.1-codex-mini',
+                },
+              },
+            })
+          end,
+
+          zen_sonnet = function()
             return require('codecompanion.adapters').extend('anthropic', {
               env = {
                 api_key = 'cmd:cat ~/.local/share/zen-key',
@@ -132,7 +146,7 @@ require('lazy').setup({
           adapter = 'opencode', -- Use OpenCode for the main chat
         },
         inline = {
-          adapter = 'zen',
+          adapter = 'zen_codex',
         },
         agent = {
           adapter = 'opencode', -- Use OpenCode for the @agent tool
