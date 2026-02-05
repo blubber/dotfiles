@@ -46,4 +46,20 @@ return {
       }
     )
   ),
+  s(
+    { trig = ';he', snippetType = 'autosnippet' },
+    fmta(
+      [[
+        def handle_event("<>", %{"<>" =>> params} socket) do
+            <>
+            {:noreply, socket}
+        end
+        ]],
+      {
+        i(1),
+        i(2),
+        i(3),
+      }
+    )
+  ),
 }

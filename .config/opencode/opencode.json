@@ -1,5 +1,4 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "gpt-5.1-codex-max",
-  "small_model": "gpt-5.1-codex-mini"
+  "model": "minimax-m2.1-free"
 }

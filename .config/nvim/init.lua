@@ -74,11 +74,11 @@ rtp:prepend(lazypath)
 require('lazy').setup({
   {
     'olimorris/codecompanion.nvim',
-    version = '^18.0.0',
     init = function()
       vim.keymap.set({ 'n', 'v' }, '<C-a>', '<cmd>CodeCompanionActions<cr>', { noremap = true, silent = true })
-      vim.keymap.set({ 'n', 'v' }, '<leader>aa', '<cmd>CodeCompanionChat Toggle<cr>', { noremap = true, silent = true })
-      vim.keymap.set('v', 'ga', '<cmd>CodeCompanionAactions<cr>', { noremap = true, silent = true })
+      vim.keymap.set({ 'n', 'v' }, '<leader>a', '<cmd>CodeCompanionChat<cr>', { noremap = true, silent = true })
+      vim.keymap.set({ 'n', 'v' }, '<leader>aa', '<cmd>CodeCompanionChat adapter=opencode<cr>', { noremap = true, silent = true })
+      vim.keymap.set('v', 'ga', '<cmd>CodeCompanionActions<cr>', { noremap = true, silent = true })
     end,
     opts = {
       adapters = {
@@ -87,7 +87,7 @@ require('lazy').setup({
         },
 
         http = {
-          zen_codex = function()
+          zen_openai = function()
             return require('codecompanion.adapters').extend('openai_responses', {
               env = {
                 api_key = 'cmd:cat ~/.local/share/zen-key',
@@ -96,12 +96,29 @@ require('lazy').setup({
               schema = {
                 model = {
                   default = 'gpt-5.1-codex-mini',
+                  choices = {
+                    'gpt-5.2',
+                    'gpt-5.2-codex',
+                    'gpt-5.1',
+                    'gpt-5.1-codex',
+                    'gpt-5.1-codex-max',
+                    'gpt-5.1-codex-mini',
+                    'gpt-5',
+                    'gpt-5-codex',
+                    'gpt-5-nano',
+                  },
+                },
+                temperature = {
+                  default = 0.2,
+                },
+                top_p = {
+                  default = 0.2,
                 },
               },
             })
           end,
 
-          zen_sonnet = function()
+          zen_anthropic = function()
             return require('codecompanion.adapters').extend('anthropic', {
               env = {
                 api_key = 'cmd:cat ~/.local/share/zen-key',
@@ -110,12 +127,20 @@ require('lazy').setup({
               schema = {
                 model = {
                   default = 'claude-haiku-4-5',
+                  choices = {
+                    'claude-sonnet-4-5',
+                    'claude-sonnet-4',
+                    'claude-haiku-4-5',
+                    'claude-3-5-haiku',
+                    'claude-opus-4-5',
+                    'claude-opus-4-1',
+                  },
                 },
-                extended_thinking = {
-                  default = false,
+                temperature = {
+                  default = 0.2,
                 },
-                thinking_budget = {
-                  default = 1024,
+                top_p = {
+                  default = 0.2,
                 },
               },
             })
@@ -129,7 +154,16 @@ require('lazy').setup({
               url = 'https://openrouter.ai/api/v1/chat/completions',
               schema = {
                 model = {
-                  default = 'anthropic/claude-3.5-sonnet', -- Change to your preferred model
+                  default = 'google/gemini-3-flash-preview',
+                  choices = {
+                    'google/gemini-3-flash-preview',
+                  },
+                },
+                temperature = {
+                  default = 0.2,
+                },
+                top_p = {
+                  default = 0.2,
                 },
               },
             })
@@ -141,15 +175,17 @@ require('lazy').setup({
           enabled = false,
         },
       },
-      strategies = {
+      opts = {
+        log_level = 'ERROR',
+      },
+      interactions = {
         chat = {
-          adapter = 'opencode', -- Use OpenCode for the main chat
+          adapter = 'openrouter',
+          model = 'google/gemini-3-flash-preview',
         },
         inline = {
-          adapter = 'zen_codex',
-        },
-        agent = {
-          adapter = 'opencode', -- Use OpenCode for the @agent tool
+          adapter = 'zen_openai',
+          model = 'gpt-5.1-mini',
         },
       },
     },
@@ -416,7 +452,7 @@ require('lazy').setup({
       },
 
       sources = {
-        default = { 'lsp', 'path', 'snippets', 'lazydev' },
+        default = { 'lsp', 'path', 'snippets', 'lazydev', 'codecompanion' },
         providers = {
           lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
         },
