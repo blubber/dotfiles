@@ -75,7 +75,6 @@ require('lazy').setup({
   {
     'olimorris/codecompanion.nvim',
     init = function()
-      vim.keymap.set({ 'n', 'v' }, '<C-a>', '<cmd>CodeCompanionActions<cr>', { noremap = true, silent = true })
       vim.keymap.set({ 'n', 'v' }, '<leader>a', '<cmd>CodeCompanionChat<cr>', { noremap = true, silent = true })
       vim.keymap.set({ 'n', 'v' }, '<leader>aa', '<cmd>CodeCompanionChat adapter=opencode<cr>', { noremap = true, silent = true })
       vim.keymap.set('v', 'ga', '<cmd>CodeCompanionActions<cr>', { noremap = true, silent = true })
@@ -83,7 +82,20 @@ require('lazy').setup({
     opts = {
       adapters = {
         acp = {
-          opencode = 'opencode',
+          opencode = function()
+            return require('codecompanion.adapters').extend('opencode', {
+              defaults = {
+                model = 'gpt-5.1-codex',
+              },
+            })
+          end,
+          claude_code = function()
+            return require('codecompanion.adapters').extend('claude_code', {
+              env = {
+                CLAUDE_CODE_OAUTH_TOKEN = 'cmd:cat ~/.local/share/claude-key',
+              },
+            })
+          end,
         },
 
         http = {
@@ -107,12 +119,6 @@ require('lazy').setup({
                     'gpt-5-codex',
                     'gpt-5-nano',
                   },
-                },
-                temperature = {
-                  default = 0.2,
-                },
-                top_p = {
-                  default = 0.2,
                 },
               },
             })
@@ -157,6 +163,7 @@ require('lazy').setup({
                   default = 'google/gemini-3-flash-preview',
                   choices = {
                     'google/gemini-3-flash-preview',
+                    'google/gemini-2.5-flash-lite',
                   },
                 },
                 temperature = {
@@ -176,7 +183,7 @@ require('lazy').setup({
         },
       },
       opts = {
-        log_level = 'ERROR',
+        log_level = 'DEBUG',
       },
       interactions = {
         chat = {
@@ -185,14 +192,35 @@ require('lazy').setup({
         },
         inline = {
           adapter = 'zen_openai',
-          model = 'gpt-5.1-mini',
+          model = 'gpt-5.1-codex',
+        },
+        cmd = {
+          adapter = 'zen_openai',
+          model = 'gpt-5.1-codex',
+        },
+        background = {
+          adapter = 'openrouter',
+          model = 'google/gemini-2.5-flash-lite',
+        },
+      },
+      extensions = {
+        history = {
+          opts = {
+            enabled = true,
+            expiration_days = 6,
+            delete_on_clearing_chat = true,
+            title_generation_opts = {
+              adapter = 'openrouter',
+              model = 'google/gemini-2.5-flash-lite',
+            },
+          },
         },
       },
     },
-
     dependencies = {
       'nvim-lua/plenary.nvim',
       'nvim-treesitter/nvim-treesitter',
+      'ravitemer/codecompanion-history.nvim',
     },
   },
 
@@ -331,6 +359,8 @@ require('lazy').setup({
 
       local ensure_installed = {
         'prettier',
+        'basedpyright',
+        'expert',
         'prettierd',
         'ruff',
         'stylua',
@@ -543,7 +573,6 @@ require('lazy').setup({
     opts = {
       ensure_installed = {
         'bash',
-        'c',
         'css',
         'diff',
         'elixir',
@@ -560,6 +589,7 @@ require('lazy').setup({
         'typescript',
         'vim',
         'vimdoc',
+        'yaml',
       },
       auto_install = true,
       highlight = {
