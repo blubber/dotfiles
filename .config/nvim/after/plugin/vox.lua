@@ -3,6 +3,8 @@ vim.opt.runtimepath:append '/Users/tiemo/src/vox.nvim'
 local vox = require 'vox'
 
 vox.setup {
+  telescope = true,
+  opts = { telescope = true },
   backend = require('vox.voxd_backend').setup {
     routing = {
       linenr = 'fast',
