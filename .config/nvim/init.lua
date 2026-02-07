@@ -96,6 +96,14 @@ require('lazy').setup({
               },
             })
           end,
+
+          codex = function()
+            return require('codecompanion.adapters').extend('codex', {
+              defaults = {
+                auth_method = 'chatgpt',
+              },
+            })
+          end,
         },
 
         http = {

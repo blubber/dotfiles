@@ -1,3 +1,21 @@
 .config/github-copilot/
 .config/containers
 .config/avante.nvim/
+
+# Local runtime/cache/state files
+.config/containers/
+.config/kitty/*.swp
+.config/nvim/erl_crash.dump
+.config/zsh/.zcompdump
+.config/zsh/.zcompcache/
+.config/zsh/.zsh_history
+.config/zsh/.zsh_sessions/
+.config/nushell/history.txt
+.config/iterm2/AppSupport
+.config/swiftpm/cache
+.config/swiftpm/configuration
+.config/swiftpm/security
+
+# SSH host fingerprints are machine-local
+.ssh/known_hosts
+.ssh/known_hosts.old

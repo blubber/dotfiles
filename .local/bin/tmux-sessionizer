@@ -21,9 +21,9 @@ fi
 
 [[ ! $selected ]] && exit 0
 
-if [[ "%selected" == "home" ]]; then
+if [[ "$selected" == "home" ]]; then
         selected="$HOME"
-        select_name="home"
+        selected_name="home"
 else
     selected="$HOME/$selected"
     selected_name=$(basename "$selected" | tr . _)
@@ -39,8 +39,8 @@ fi
 
 lt=$(printf %s "$(tmux display-message -p '#S')")
 
-if [[ "$selected_name" != "$alt" ]]; then
-    echo -n "$alt" > /tmp/tmux-session-alt
+if [[ "$selected_name" != "$lt" ]]; then
+    echo -n "$lt" > /tmp/tmux-session-alt
 fi
 
 if ! tmux has-session -t=$selected_name 2> /dev/null; then
@@ -48,7 +48,7 @@ if ! tmux has-session -t=$selected_name 2> /dev/null; then
 fi
 
 if [[ -z $TMUX ]]; then
-    echo tmux attach-session -t $selected_name
+    tmux attach-session -t $selected_name
 else
     tmux switch-client -t $selected_name
 fi
