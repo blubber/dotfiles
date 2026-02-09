@@ -76,8 +76,7 @@ require('lazy').setup({
     'olimorris/codecompanion.nvim',
     init = function()
       vim.keymap.set({ 'n', 'v' }, '<leader>a', '<cmd>CodeCompanionChat<cr>', { noremap = true, silent = true })
-      vim.keymap.set({ 'n', 'v' }, '<leader>aa', '<cmd>CodeCompanionChat adapter=opencode<cr>', { noremap = true, silent = true })
-      vim.keymap.set('v', 'ga', '<cmd>CodeCompanionActions<cr>', { noremap = true, silent = true })
+      vim.keymap.set({ 'n', 'v' }, 'ga', '<cmd>CodeCompanionActions<cr>', { noremap = true, silent = true })
     end,
     opts = {
       adapters = {
@@ -195,8 +194,8 @@ require('lazy').setup({
       },
       interactions = {
         chat = {
-          adapter = 'openrouter',
-          model = 'google/gemini-3-flash-preview',
+          adapter = 'codex',
+          model = 'gpt-5.3-codex/medium',
         },
         inline = {
           adapter = 'zen_openai',
@@ -211,6 +210,14 @@ require('lazy').setup({
           model = 'google/gemini-2.5-flash-lite',
         },
       },
+      prompt_library = {
+        markdown = {
+          dirs = {
+            '~/.config/nvim/prompts',
+          },
+        },
+      },
+
       extensions = {
         history = {
           opts = {
