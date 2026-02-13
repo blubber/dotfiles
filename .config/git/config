@@ -18,8 +18,8 @@
 	gpgsign = false
 [pager]
 	diff = nvim -R -c \"set nomodified ft=diff\"
-	show = nvim -R -c \"set nomodified
-	log = nvim -R -c \"set nomodified ft=git
+	show = nvim -R -c \"set nomodified\"
+	log = nvim -R -c \"set nomodified ft=git\"
 [color]
 	diff = false
 	show = false

@@ -32,3 +32,22 @@ vim.keymap.set('n', 'w', function()
   vox.suspend()
   vox.speak(vox.word())
 end, { noremap = true, silent = true })
+
+local group = vim.api.nvim_create_augroup('VoxCodeCompanion', { clear = true })
+
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'CodeCompanionRequestStarted',
+  group = group,
+  callback = function()
+    vim.cmd 'Vox disable'
+  end,
+})
+
+vim.api.nvim_create_autocmd('User', {
+  pattern = 'CodeCompanionRequestFinished',
+  group = group,
+  callback = function()
+    vim.cmd 'Vox enable'
+    vox.speak { source = 'line', content = 'Agent done' }
+  end,
+})

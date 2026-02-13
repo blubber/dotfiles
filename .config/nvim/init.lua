@@ -75,7 +75,7 @@ require('lazy').setup({
   {
     'olimorris/codecompanion.nvim',
     init = function()
-      vim.keymap.set({ 'n', 'v' }, '<leader>a', '<cmd>CodeCompanionChat<cr>', { noremap = true, silent = true })
+      vim.keymap.set({ 'n', 'v' }, '<leader>a', '<cmd>CodeCompanionChat Toggle<cr>', { noremap = true, silent = true })
       vim.keymap.set({ 'n', 'v' }, 'ga', '<cmd>CodeCompanionActions<cr>', { noremap = true, silent = true })
     end,
     opts = {
@@ -519,26 +519,15 @@ require('lazy').setup({
     },
   },
 
-  { -- You can easily change to a different colorscheme.
-    -- Change the name of the colorscheme plugin below, and then
-    -- change the command in the config to whatever the name of that colorscheme is.
-    --
-    -- If you want to see what colorschemes are already installed, you can use `:Telescope colorscheme`.
-    'folke/tokyonight.nvim',
-    priority = 1000, -- Make sure to load this before all the other start plugins.
+  {
+    'scottmckendry/cyberdream.nvim',
+    lazy = false,
+    priority = 1000,
     config = function()
-      ---@diagnostic disable-next-line: missing-fields
-      require('tokyonight').setup {
-        styles = {
-          comments = { italic = false }, -- Disable italics in comments
-        },
-      }
+      vim.cmd.colorscheme 'cyberdream'
 
-      -- Load the colorscheme here.
-      -- Like many other themes, this one has different styles, and you could load
-      -- any other, such as 'tokyonight-storm', 'tokyonight-moon', or 'tokyonight-day'.
-      -- vim.cmd.colorscheme 'tokyonight-night'
-      vim.cmd.colorscheme 'default'
+      -- vim.cmd.hi 'Normal guibg=black guifg=whit'
+      -- vim.cmd.hi 'Comment guifg=#aaaaff'
     end,
   },
 
@@ -671,9 +660,6 @@ require('lazy').setup({
     },
   },
 })
-
-vim.cmd.hi 'Normal guibg=black guifg=whit'
-vim.cmd.hi 'Comment guifg=#aaaaff'
 
 vim.keymap.set('n', '<c-d>', '<c-d>zz')
 vim.keymap.set('n', '<c-u>', '<c-u>zz')
