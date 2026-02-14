@@ -171,6 +171,8 @@ require('lazy').setup({
                   choices = {
                     'google/gemini-3-flash-preview',
                     'google/gemini-2.5-flash-lite',
+                    'google/gemini-3-pro-preview',
+                    'z-ai/glm-5',
                   },
                 },
                 temperature = {
