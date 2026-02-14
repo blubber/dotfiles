@@ -526,7 +526,7 @@ require('lazy').setup({
     config = function()
       vim.cmd.colorscheme 'cyberdream'
 
-      -- vim.cmd.hi 'Normal guibg=black guifg=whit'
+      vim.cmd.hi 'Normal guibg=black guifg=whit'
       -- vim.cmd.hi 'Comment guifg=#aaaaff'
     end,
   },
