@@ -665,5 +665,6 @@ require('lazy').setup({
 
 vim.keymap.set('n', '<c-d>', '<c-d>zz')
 vim.keymap.set('n', '<c-u>', '<c-u>zz')
+vim.keymap.set('i', 'jj', '<Esc>')
 
 -- vim: ts=2 sts=2 sw=2 et
