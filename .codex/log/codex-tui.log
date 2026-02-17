@@ -1,0 +1,211 @@
+2026-02-07T08:04:46.841045Z  INFO codex_core::auth: Reloading auth
+2026-02-07T08:04:46.847239Z  INFO codex_core::auth: Reloaded auth, changed: true
+2026-02-07T08:05:40.785683Z  INFO codex_core::skills::manager: skills cache cleared (1 entries)
+2026-02-07T08:05:41.392989Z  INFO session_init: codex_core::codex: new
+2026-02-07T08:05:41.430379Z  INFO session_init: codex_core::codex: close time.busy=5.33ms time.idle=32.1ms
+2026-02-07T08:05:41.430678Z  INFO session_loop{thread_id=019c3722-9d91-7a90-8939-8987661aec98}: codex_core::codex: new
+2026-02-07T08:05:41.787401Z  INFO codex_core::skills::manager: skills cache cleared (1 entries)
+2026-02-07T08:06:55.536878Z  INFO codex_tui::chatwidget: Selected model: gpt-5.3-codex, Selected effort: medium
+2026-02-07T08:07:05.525246Z  INFO session_loop{thread_id=019c3722-9d91-7a90-8939-8987661aec98}: codex_core::codex::handlers: Shutting down Codex instance
+2026-02-07T08:07:05.526165Z  INFO session_loop{thread_id=019c3722-9d91-7a90-8939-8987661aec98}: codex_core::codex: close time.busy=45.8ms time.idle=84.0s
+2026-02-07T08:11:35.830370Z  INFO session_init: codex_core::codex: new
+2026-02-07T08:11:35.855329Z  INFO session_init: codex_core::codex: close time.busy=692µs time.idle=24.3ms
+2026-02-07T08:11:35.855347Z  INFO session_loop{thread_id=019c3728-0616-79f2-8697-ed1bb858d855}: codex_core::codex: new
+2026-02-07T08:11:39.492023Z  INFO session_loop{thread_id=019c3728-0616-79f2-8697-ed1bb858d855}: codex_core::codex::handlers: Shutting down Codex instance
+2026-02-07T08:11:39.492212Z  INFO session_loop{thread_id=019c3728-0616-79f2-8697-ed1bb858d855}: codex_core::codex: close time.busy=12.2ms time.idle=3.62s
+2026-02-07T08:14:14.021590Z  INFO session_init: codex_core::codex: new
+2026-02-07T08:14:14.045087Z  INFO session_init: codex_core::codex: close time.busy=656µs time.idle=22.8ms
+2026-02-07T08:14:14.045113Z  INFO session_loop{thread_id=019c372a-7005-7503-b52c-866ce595b88e}: codex_core::codex: new
+2026-02-07T08:14:21.693866Z  WARN session_loop{thread_id=019c372a-7005-7503-b52c-866ce595b88e}: codex_core::codex: stream disconnected - retrying sampling request (1/5 in 192ms)...
+2026-02-07T08:14:22.084156Z  WARN session_loop{thread_id=019c372a-7005-7503-b52c-866ce595b88e}: codex_core::codex: stream disconnected - retrying sampling request (2/5 in 361ms)...
+2026-02-07T08:14:22.615080Z  WARN session_loop{thread_id=019c372a-7005-7503-b52c-866ce595b88e}: codex_core::codex: stream disconnected - retrying sampling request (3/5 in 786ms)...
+2026-02-07T08:14:23.589199Z  WARN session_loop{thread_id=019c372a-7005-7503-b52c-866ce595b88e}: codex_core::codex: stream disconnected - retrying sampling request (4/5 in 1.664s)...
+2026-02-07T08:14:25.430051Z  WARN session_loop{thread_id=019c372a-7005-7503-b52c-866ce595b88e}: codex_core::codex: stream disconnected - retrying sampling request (5/5 in 3.003s)...
+2026-02-07T08:14:28.637587Z  INFO session_loop{thread_id=019c372a-7005-7503-b52c-866ce595b88e}: codex_core::codex: Turn error: unexpected status 401 Unauthorized: Incorrect API key provided: OPENAI_A**_KEY. You can find your API key at https://platform.openai.com/account/api-keys., url: https://api.openai.com/v1/responses, cf-ray: 9ca16f141da3bc8a-AMS, request id: req_ff18e6f6f73747838f4631e677bc03d9
+2026-02-07T08:17:01.920886Z  INFO session_loop{thread_id=019c372a-7005-7503-b52c-866ce595b88e}: codex_core::codex::handlers: Shutting down Codex instance
+2026-02-07T08:17:01.921152Z  INFO session_loop{thread_id=019c372a-7005-7503-b52c-866ce595b88e}: codex_core::codex: close time.busy=99.5ms time.idle=168s
+2026-02-07T08:17:04.252862Z  INFO session_init: codex_core::codex: new
+2026-02-07T08:17:04.276657Z  INFO session_init: codex_core::codex: close time.busy=631µs time.idle=23.2ms
+2026-02-07T08:17:04.276679Z  INFO session_loop{thread_id=019c372d-08fc-77b0-a77e-fa76c3e2ee86}: codex_core::codex: new
+2026-02-07T08:17:10.154294Z  INFO session_loop{thread_id=019c372d-08fc-77b0-a77e-fa76c3e2ee86}: codex_core::codex::handlers: Shutting down Codex instance
+2026-02-07T08:17:10.154535Z  INFO session_loop{thread_id=019c372d-08fc-77b0-a77e-fa76c3e2ee86}: codex_core::codex: close time.busy=11.1ms time.idle=5.87s
+2026-02-07T08:17:59.183784Z  INFO codex_core::auth: Reloading auth
+2026-02-07T08:17:59.186939Z  INFO codex_core::auth: Reloaded auth, changed: true
+2026-02-07T08:18:16.998045Z  INFO session_init: codex_core::codex: new
+2026-02-07T08:18:17.039411Z  INFO session_init: codex_core::codex: close time.busy=2.10ms time.idle=39.3ms
+2026-02-07T08:18:17.039432Z  INFO session_loop{thread_id=019c372e-2526-7e72-83e1-9cba8efad18d}: codex_core::codex: new
+2026-02-07T08:18:28.560989Z  INFO session_loop{thread_id=019c372e-2526-7e72-83e1-9cba8efad18d}: codex_core::stream_events_utils: ToolCall: exec_command {"cmd":"pwd && rg --files","workdir":"/Users/tiemo/dotfiles","max_output_tokens":12000} thread_id=019c372e-2526-7e72-83e1-9cba8efad18d
+2026-02-07T08:18:28.561111Z  INFO session_loop{thread_id=019c372e-2526-7e72-83e1-9cba8efad18d}: codex_core::stream_events_utils: ToolCall: exec_command {"cmd":"ls -la","workdir":"/Users/tiemo/dotfiles","max_output_tokens":4000} thread_id=019c372e-2526-7e72-83e1-9cba8efad18d
+2026-02-07T08:18:28.790816Z  INFO session_loop{thread_id=019c372e-2526-7e72-83e1-9cba8efad18d}: codex_core::codex: post sampling token usage turn_id=2 total_usage_tokens=9002 estimated_token_count=Some(5535) auto_compact_limit=244800 token_limit_reached=false needs_follow_up=true
+2026-02-07T08:18:32.199497Z  INFO session_loop{thread_id=019c372e-2526-7e72-83e1-9cba8efad18d}: codex_core::stream_events_utils: ToolCall: exec_command {"cmd":"rg --files -uu","workdir":"/Users/tiemo/dotfiles","max_output_tokens":20000} thread_id=019c372e-2526-7e72-83e1-9cba8efad18d
+2026-02-07T08:18:32.204828Z  INFO session_loop{thread_id=019c372e-2526-7e72-83e1-9cba8efad18d}: codex_core::stream_events_utils: ToolCall: exec_command {"cmd":"find .config -maxdepth 3 -type f | sed 's#^./##'","workdir":"/Users/tiemo/dotfiles","max_output_tokens":20000} thread_id=019c372e-2526-7e72-83e1-9cba8efad18d
+2026-02-07T08:18:32.344558Z  INFO session_loop{thread_id=019c372e-2526-7e72-83e1-9cba8efad18d}: codex_core::codex: post sampling token usage turn_id=2 total_usage_tokens=22395 estimated_token_count=Some(18828) auto_compact_limit=244800 token_limit_reached=false needs_follow_up=true
+2026-02-07T08:18:38.129514Z  INFO session_loop{thread_id=019c372e-2526-7e72-83e1-9cba8efad18d}: codex_core::stream_events_utils: ToolCall: exec_command {"cmd":"sed -n '1,220p' .zshenv","workdir":"/Users/tiemo/dotfiles"} thread_id=019c372e-2526-7e72-83e1-9cba8efad18d
+2026-02-07T08:18:38.129666Z  INFO session_loop{thread_id=019c372e-2526-7e72-83e1-9cba8efad18d}: codex_core::stream_events_utils: ToolCall: exec_command {"cmd":"sed -n '1,260p' .config/zsh/.zshrc","workdir":"/Users/tiemo/dotfiles","max_output_tokens":12000} thread_id=019c372e-2526-7e72-83e1-9cba8efad18d
+2026-02-07T08:18:38.129837Z  INFO session_loop{thread_id=019c372e-2526-7e72-83e1-9cba8efad18d}: codex_core::stream_events_utils: ToolCall: exec_command {"cmd":"sed -n '1,260p' .config/nvim/init.lua","workdir":"/Users/tiemo/dotfiles","max_output_tokens":12000} thread_id=019c372e-2526-7e72-83e1-9cba8efad18d
+2026-02-07T08:18:38.134255Z  INFO session_loop{thread_id=019c372e-2526-7e72-83e1-9cba8efad18d}: codex_core::stream_events_utils: ToolCall: exec_command {"cmd":"sed -n '1,260p' Dockerfile && echo '---' && sed -n '1,260p' docker-entrypoint.sh","workdir":"/Users/tiemo/dotfiles","max_output_tokens":12000} thread_id=019c372e-2526-7e72-83e1-9cba8efad18d
+2026-02-07T08:18:38.268529Z  INFO session_loop{thread_id=019c372e-2526-7e72-83e1-9cba8efad18d}: codex_core::codex: post sampling token usage turn_id=2 total_usage_tokens=32710 estimated_token_count=Some(22084) auto_compact_limit=244800 token_limit_reached=false needs_follow_up=true
+2026-02-07T08:18:44.557369Z  INFO session_loop{thread_id=019c372e-2526-7e72-83e1-9cba8efad18d}: codex_core::stream_events_utils: ToolCall: exec_command {"cmd":"find .config/nvim/lua -maxdepth 4 -type f | sort","workdir":"/Users/tiemo/dotfiles","max_output_tokens":12000} thread_id=019c372e-2526-7e72-83e1-9cba8efad18d
+2026-02-07T08:18:44.559545Z  INFO session_loop{thread_id=019c372e-2526-7e72-83e1-9cba8efad18d}: codex_core::stream_events_utils: ToolCall: exec_command {"cmd":"sed -n '1,260p' .config/zsh/aliases && echo '---' && sed -n '1,260p' .config/zsh/macos && echo '---' && sed -n '1,260p' .config/zsh/linux && echo '---' && sed -n '1,260p' .config/zsh/pg","workdir":"/Users/tiemo/dotfiles","max_output_tokens":12000} thread_id=019c372e-2526-7e72-83e1-9cba8efad18d
+2026-02-07T08:18:44.559648Z  INFO session_loop{thread_id=019c372e-2526-7e72-83e1-9cba8efad18d}: codex_core::stream_events_utils: ToolCall: exec_command {"cmd":"sed -n '1,260p' .config/tmux/tmux.conf && echo '---' && sed -n '1,260p' .config/starship.toml && echo '---' && sed -n '1,260p' .config/kitty/kitty.conf && echo '---' && sed -n '1,260p' .config/ghostty/config","workdir":"/Users/tiemo/dotfiles","max_output_tokens":12000} thread_id=019c372e-2526-7e72-83e1-9cba8efad18d
+2026-02-07T08:18:44.706094Z  INFO session_loop{thread_id=019c372e-2526-7e72-83e1-9cba8efad18d}: codex_core::codex: post sampling token usage turn_id=2 total_usage_tokens=36924 estimated_token_count=Some(26181) auto_compact_limit=244800 token_limit_reached=false needs_follow_up=true
+2026-02-07T08:18:50.086696Z  INFO session_loop{thread_id=019c372e-2526-7e72-83e1-9cba8efad18d}: codex_core::codex: interrupt received: abort current task, if any
+2026-02-07T08:18:51.222951Z  INFO session_loop{thread_id=019c372e-2526-7e72-83e1-9cba8efad18d}: codex_core::codex::handlers: Shutting down Codex instance
+2026-02-07T08:18:51.223212Z  INFO session_loop{thread_id=019c372e-2526-7e72-83e1-9cba8efad18d}: codex_core::codex: close time.busy=84.0ms time.idle=34.1s
+2026-02-16T04:57:56.143487Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.101.0"
+2026-02-16T04:57:56.143541Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0"
+2026-02-16T04:57:56.144086Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.0.0") fetched_at=2026-02-16 04:35:05.458118 UTC
+2026-02-16T04:57:56.144106Z  INFO codex_core::models_manager::cache: models cache: cache version mismatch cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0" cached_version=Some("0.0.0")
+2026-02-16T04:57:56.144137Z  INFO codex_core::models_manager::manager: models cache: no usable cache entry
+2026-02-16T04:57:56.148089Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.101.0"
+2026-02-16T04:57:56.148108Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0"
+2026-02-16T04:57:56.148395Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.0.0") fetched_at=2026-02-16 04:35:05.458118 UTC
+2026-02-16T04:57:56.148401Z  INFO codex_core::models_manager::cache: models cache: cache version mismatch cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0" cached_version=Some("0.0.0")
+2026-02-16T04:57:56.148405Z  INFO codex_core::models_manager::manager: models cache: no usable cache entry
+2026-02-16T04:57:56.148410Z  INFO codex_core::models_manager::manager: models cache: cache miss, fetching remote models
+2026-02-16T04:57:56.151375Z  INFO codex_core::skills::manager: skills cache cleared (1 entries)
+2026-02-16T04:57:57.312041Z  INFO session_init: codex_core::codex: new
+2026-02-16T04:57:57.315302Z  INFO session_init:shell_snapshot{thread_id=019c64cf-f940-76b2-91fb-f94ab957642a}: codex_core::shell_snapshot: new
+2026-02-16T04:57:57.321048Z  INFO session_loop{thread_id=019c64cf-f940-76b2-91fb-f94ab957642a}: codex_core::codex: new
+2026-02-16T04:57:57.557160Z  INFO session_init:shell_snapshot{thread_id=019c64cf-f940-76b2-91fb-f94ab957642a}: codex_core::shell_snapshot: Shell snapshot successfully created: /Users/tiemo/.codex/shell_snapshots/019c64cf-f940-76b2-91fb-f94ab957642a.sh
+2026-02-16T04:57:57.565020Z  INFO session_init:shell_snapshot{thread_id=019c64cf-f940-76b2-91fb-f94ab957642a}: codex_core::shell_snapshot: close time.busy=6.20ms time.idle=244ms
+2026-02-16T04:57:57.565046Z  INFO session_init: codex_core::codex: close time.busy=8.01ms time.idle=245ms
+2026-02-16T04:58:06.154824Z  INFO codex_core::skills::manager: skills cache cleared (1 entries)
+2026-02-16T04:58:20.278282Z  INFO session_loop{thread_id=019c64cf-f940-76b2-91fb-f94ab957642a}: codex_core::codex::handlers: Shutting down Codex instance
+2026-02-16T04:58:20.279144Z  INFO session_loop{thread_id=019c64cf-f940-76b2-91fb-f94ab957642a}: codex_core::codex: close time.busy=49.7ms time.idle=22.9s
+2026-02-16T04:58:29.853888Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.101.0"
+2026-02-16T04:58:29.853902Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0"
+2026-02-16T04:58:29.854141Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.101.0") fetched_at=2026-02-16 04:57:57.309122 UTC
+2026-02-16T04:58:29.854148Z  INFO codex_core::models_manager::cache: models cache: cache hit cache_path=/Users/tiemo/.codex/models_cache.json cache_ttl_secs=300
+2026-02-16T04:58:29.854318Z  INFO codex_core::models_manager::manager: models cache: cache entry applied models_count=10 etag=Some("W/\"845db390bd0aba8aa57b43b306ac7d3e\"")
+2026-02-16T04:58:29.858153Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.101.0"
+2026-02-16T04:58:29.858159Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0"
+2026-02-16T04:58:29.858383Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.101.0") fetched_at=2026-02-16 04:57:57.309122 UTC
+2026-02-16T04:58:29.858391Z  INFO codex_core::models_manager::cache: models cache: cache hit cache_path=/Users/tiemo/.codex/models_cache.json cache_ttl_secs=300
+2026-02-16T04:58:29.858517Z  INFO codex_core::models_manager::manager: models cache: cache entry applied models_count=10 etag=Some("W/\"845db390bd0aba8aa57b43b306ac7d3e\"")
+2026-02-16T04:58:29.858531Z  INFO codex_core::models_manager::manager: models cache: using cached models for OnlineIfUncached
+2026-02-16T04:58:29.858591Z  INFO session_init: codex_core::codex: new
+2026-02-16T04:58:29.858965Z  INFO session_init:shell_snapshot{thread_id=019c64d0-7862-7b31-9ab9-4a16c344c9fc}: codex_core::shell_snapshot: new
+2026-02-16T04:58:29.860329Z  INFO session_loop{thread_id=019c64d0-7862-7b31-9ab9-4a16c344c9fc}: codex_core::codex: new
+2026-02-16T04:58:30.061867Z  INFO session_init:shell_snapshot{thread_id=019c64d0-7862-7b31-9ab9-4a16c344c9fc}: codex_core::shell_snapshot: Shell snapshot successfully created: /Users/tiemo/.codex/shell_snapshots/019c64d0-7862-7b31-9ab9-4a16c344c9fc.sh
+2026-02-16T04:58:30.069731Z  INFO session_init:shell_snapshot{thread_id=019c64d0-7862-7b31-9ab9-4a16c344c9fc}: codex_core::shell_snapshot: close time.busy=2.81ms time.idle=208ms
+2026-02-16T04:58:30.069743Z  INFO session_init: codex_core::codex: close time.busy=1.57ms time.idle=210ms
+2026-02-16T04:58:52.499347Z  INFO session_loop{thread_id=019c64d0-7862-7b31-9ab9-4a16c344c9fc}: codex_core::codex::handlers: Shutting down Codex instance
+2026-02-16T04:58:52.499586Z  INFO session_loop{thread_id=019c64d0-7862-7b31-9ab9-4a16c344c9fc}: codex_core::codex: close time.busy=11.9ms time.idle=22.6s
+2026-02-16T04:59:32.977039Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.101.0"
+2026-02-16T04:59:32.977047Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0"
+2026-02-16T04:59:32.977296Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.0.0") fetched_at=2026-02-16 04:58:56.032966 UTC
+2026-02-16T04:59:32.977303Z  INFO codex_core::models_manager::cache: models cache: cache version mismatch cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0" cached_version=Some("0.0.0")
+2026-02-16T04:59:32.977310Z  INFO codex_core::models_manager::manager: models cache: no usable cache entry
+2026-02-16T04:59:32.981202Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.101.0"
+2026-02-16T04:59:32.981208Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0"
+2026-02-16T04:59:32.981410Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.0.0") fetched_at=2026-02-16 04:58:56.032966 UTC
+2026-02-16T04:59:32.981419Z  INFO codex_core::models_manager::cache: models cache: cache version mismatch cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0" cached_version=Some("0.0.0")
+2026-02-16T04:59:32.981423Z  INFO codex_core::models_manager::manager: models cache: no usable cache entry
+2026-02-16T04:59:32.981426Z  INFO codex_core::models_manager::manager: models cache: cache miss, fetching remote models
+2026-02-16T04:59:32.985764Z  INFO codex_core::skills::manager: skills cache cleared (1 entries)
+2026-02-16T04:59:33.160295Z  INFO session_init: codex_core::codex: new
+2026-02-16T04:59:33.161280Z  INFO session_init:shell_snapshot{thread_id=019c64d1-6fa8-7142-a1d1-4e0fb9b9e689}: codex_core::shell_snapshot: new
+2026-02-16T04:59:33.164588Z  INFO session_loop{thread_id=019c64d1-6fa8-7142-a1d1-4e0fb9b9e689}: codex_core::codex: new
+2026-02-16T04:59:33.379648Z  INFO session_init:shell_snapshot{thread_id=019c64d1-6fa8-7142-a1d1-4e0fb9b9e689}: codex_core::shell_snapshot: Shell snapshot successfully created: /Users/tiemo/.codex/shell_snapshots/019c64d1-6fa8-7142-a1d1-4e0fb9b9e689.sh
+2026-02-16T04:59:33.387717Z  INFO session_init:shell_snapshot{thread_id=019c64d1-6fa8-7142-a1d1-4e0fb9b9e689}: codex_core::shell_snapshot: close time.busy=4.77ms time.idle=222ms
+2026-02-16T04:59:33.387731Z  INFO session_init: codex_core::codex: close time.busy=4.07ms time.idle=223ms
+2026-02-16T04:59:42.989305Z  INFO codex_core::skills::manager: skills cache cleared (1 entries)
+2026-02-16T05:00:21.948860Z  INFO session_loop{thread_id=019c64d1-6fa8-7142-a1d1-4e0fb9b9e689}: codex_core::codex::handlers: Shutting down Codex instance
+2026-02-16T05:00:21.949027Z  INFO session_loop{thread_id=019c64d1-6fa8-7142-a1d1-4e0fb9b9e689}: codex_core::codex: close time.busy=50.8ms time.idle=48.7s
+2026-02-16T05:00:23.379022Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.101.0"
+2026-02-16T05:00:23.379032Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0"
+2026-02-16T05:00:23.379283Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.101.0") fetched_at=2026-02-16 04:59:33.159128 UTC
+2026-02-16T05:00:23.379290Z  INFO codex_core::models_manager::cache: models cache: cache hit cache_path=/Users/tiemo/.codex/models_cache.json cache_ttl_secs=300
+2026-02-16T05:00:23.379477Z  INFO codex_core::models_manager::manager: models cache: cache entry applied models_count=10 etag=Some("W/\"845db390bd0aba8aa57b43b306ac7d3e\"")
+2026-02-16T05:00:23.385883Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.101.0"
+2026-02-16T05:00:23.385890Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0"
+2026-02-16T05:00:23.386127Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.101.0") fetched_at=2026-02-16 04:59:33.159128 UTC
+2026-02-16T05:00:23.386133Z  INFO codex_core::models_manager::cache: models cache: cache hit cache_path=/Users/tiemo/.codex/models_cache.json cache_ttl_secs=300
+2026-02-16T05:00:23.386263Z  INFO codex_core::models_manager::manager: models cache: cache entry applied models_count=10 etag=Some("W/\"845db390bd0aba8aa57b43b306ac7d3e\"")
+2026-02-16T05:00:23.386272Z  INFO codex_core::models_manager::manager: models cache: using cached models for OnlineIfUncached
+2026-02-16T05:00:23.386340Z  INFO session_init: codex_core::codex: new
+2026-02-16T05:00:23.386777Z  INFO session_init:shell_snapshot{thread_id=019c64d2-33da-7fa3-b41e-16e2904bc9d9}: codex_core::shell_snapshot: new
+2026-02-16T05:00:23.388088Z  INFO session_loop{thread_id=019c64d2-33da-7fa3-b41e-16e2904bc9d9}: codex_core::codex: new
+2026-02-16T05:00:23.595260Z  INFO session_init:shell_snapshot{thread_id=019c64d2-33da-7fa3-b41e-16e2904bc9d9}: codex_core::shell_snapshot: Shell snapshot successfully created: /Users/tiemo/.codex/shell_snapshots/019c64d2-33da-7fa3-b41e-16e2904bc9d9.sh
+2026-02-16T05:00:23.605332Z  INFO session_init:shell_snapshot{thread_id=019c64d2-33da-7fa3-b41e-16e2904bc9d9}: codex_core::shell_snapshot: close time.busy=2.93ms time.idle=216ms
+2026-02-16T05:00:23.605344Z  INFO session_init: codex_core::codex: close time.busy=1.63ms time.idle=217ms
+2026-02-16T05:00:57.004807Z  INFO session_loop{thread_id=019c64d2-33da-7fa3-b41e-16e2904bc9d9}: codex_core::codex::handlers: Shutting down Codex instance
+2026-02-16T05:00:57.005035Z  INFO session_loop{thread_id=019c64d2-33da-7fa3-b41e-16e2904bc9d9}: codex_core::codex: close time.busy=12.2ms time.idle=33.6s
+2026-02-16T05:01:26.583952Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.101.0"
+2026-02-16T05:01:26.583962Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0"
+2026-02-16T05:01:26.584203Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.101.0") fetched_at=2026-02-16 04:59:33.159128 UTC
+2026-02-16T05:01:26.584211Z  INFO codex_core::models_manager::cache: models cache: cache hit cache_path=/Users/tiemo/.codex/models_cache.json cache_ttl_secs=300
+2026-02-16T05:01:26.584363Z  INFO codex_core::models_manager::manager: models cache: cache entry applied models_count=10 etag=Some("W/\"845db390bd0aba8aa57b43b306ac7d3e\"")
+2026-02-16T05:01:26.588102Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.101.0"
+2026-02-16T05:01:26.588107Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0"
+2026-02-16T05:01:26.588340Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.101.0") fetched_at=2026-02-16 04:59:33.159128 UTC
+2026-02-16T05:01:26.588344Z  INFO codex_core::models_manager::cache: models cache: cache hit cache_path=/Users/tiemo/.codex/models_cache.json cache_ttl_secs=300
+2026-02-16T05:01:26.588479Z  INFO codex_core::models_manager::manager: models cache: cache entry applied models_count=10 etag=Some("W/\"845db390bd0aba8aa57b43b306ac7d3e\"")
+2026-02-16T05:01:26.588488Z  INFO codex_core::models_manager::manager: models cache: using cached models for OnlineIfUncached
+2026-02-16T05:01:26.588554Z  INFO session_init: codex_core::codex: new
+2026-02-16T05:01:26.588926Z  INFO session_init:shell_snapshot{thread_id=019c64d3-2abc-7d83-910f-3e1e80cdb05a}: codex_core::shell_snapshot: new
+2026-02-16T05:01:26.590016Z  INFO session_loop{thread_id=019c64d3-2abc-7d83-910f-3e1e80cdb05a}: codex_core::codex: new
+2026-02-16T05:01:26.793744Z  INFO session_init:shell_snapshot{thread_id=019c64d3-2abc-7d83-910f-3e1e80cdb05a}: codex_core::shell_snapshot: Shell snapshot successfully created: /Users/tiemo/.codex/shell_snapshots/019c64d3-2abc-7d83-910f-3e1e80cdb05a.sh
+2026-02-16T05:01:26.801645Z  INFO session_init:shell_snapshot{thread_id=019c64d3-2abc-7d83-910f-3e1e80cdb05a}: codex_core::shell_snapshot: close time.busy=2.79ms time.idle=210ms
+2026-02-16T05:01:26.801659Z  INFO session_init: codex_core::codex: close time.busy=1.35ms time.idle=212ms
+2026-02-16T05:01:28.306416Z  INFO session_loop{thread_id=019c64d3-2abc-7d83-910f-3e1e80cdb05a}: codex_core::codex::handlers: Shutting down Codex instance
+2026-02-16T05:01:28.306684Z  INFO session_loop{thread_id=019c64d3-2abc-7d83-910f-3e1e80cdb05a}: codex_core::codex: close time.busy=13.8ms time.idle=1.70s
+2026-02-16T05:02:35.142936Z  INFO codex_core::auth: Reloading auth
+2026-02-16T05:02:35.144885Z  INFO codex_core::auth: Reloaded auth, changed: true
+2026-02-16T05:02:49.243027Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.101.0"
+2026-02-16T05:02:49.243039Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0"
+2026-02-16T05:02:49.243283Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.101.0") fetched_at=2026-02-16 04:59:33.159128 UTC
+2026-02-16T05:02:49.243289Z  INFO codex_core::models_manager::cache: models cache: cache hit cache_path=/Users/tiemo/.codex/models_cache.json cache_ttl_secs=300
+2026-02-16T05:02:49.243444Z  INFO codex_core::models_manager::manager: models cache: cache entry applied models_count=10 etag=Some("W/\"845db390bd0aba8aa57b43b306ac7d3e\"")
+2026-02-16T05:02:49.247136Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.101.0"
+2026-02-16T05:02:49.247141Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0"
+2026-02-16T05:02:49.247368Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.101.0") fetched_at=2026-02-16 04:59:33.159128 UTC
+2026-02-16T05:02:49.247374Z  INFO codex_core::models_manager::cache: models cache: cache hit cache_path=/Users/tiemo/.codex/models_cache.json cache_ttl_secs=300
+2026-02-16T05:02:49.247530Z  INFO codex_core::models_manager::manager: models cache: cache entry applied models_count=10 etag=Some("W/\"845db390bd0aba8aa57b43b306ac7d3e\"")
+2026-02-16T05:02:49.247540Z  INFO codex_core::models_manager::manager: models cache: using cached models for OnlineIfUncached
+2026-02-16T05:02:49.247616Z  INFO session_init: codex_core::codex: new
+2026-02-16T05:02:49.248075Z  INFO session_init:shell_snapshot{thread_id=019c64d4-6d9f-7383-8f57-74541620c02b}: codex_core::shell_snapshot: new
+2026-02-16T05:02:49.249760Z  INFO session_loop{thread_id=019c64d4-6d9f-7383-8f57-74541620c02b}: codex_core::codex: new
+2026-02-16T05:02:49.453732Z  INFO session_init:shell_snapshot{thread_id=019c64d4-6d9f-7383-8f57-74541620c02b}: codex_core::shell_snapshot: Shell snapshot successfully created: /Users/tiemo/.codex/shell_snapshots/019c64d4-6d9f-7383-8f57-74541620c02b.sh
+2026-02-16T05:02:49.461825Z  INFO session_init:shell_snapshot{thread_id=019c64d4-6d9f-7383-8f57-74541620c02b}: codex_core::shell_snapshot: close time.busy=3.52ms time.idle=210ms
+2026-02-16T05:02:49.461837Z  INFO session_init: codex_core::codex: close time.busy=2.03ms time.idle=212ms
+2026-02-16T05:03:29.626255Z  INFO session_loop{thread_id=019c64d4-6d9f-7383-8f57-74541620c02b}: codex_core::codex::handlers: Shutting down Codex instance
+2026-02-16T05:03:29.627118Z  INFO session_loop{thread_id=019c64d4-6d9f-7383-8f57-74541620c02b}: codex_core::codex: close time.busy=13.6ms time.idle=40.4s
+2026-02-16T05:06:37.432644Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.101.0"
+2026-02-16T05:06:37.432654Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0"
+2026-02-16T05:06:37.432692Z  INFO codex_core::models_manager::manager: models cache: no usable cache entry
+2026-02-16T05:06:37.436597Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.101.0"
+2026-02-16T05:06:37.436602Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0"
+2026-02-16T05:06:37.436613Z  INFO codex_core::models_manager::manager: models cache: no usable cache entry
+2026-02-16T05:06:37.436616Z  INFO codex_core::models_manager::manager: models cache: cache miss, fetching remote models
+2026-02-16T05:06:37.441350Z  INFO codex_core::skills::manager: skills cache cleared (1 entries)
+2026-02-16T05:06:37.601663Z  INFO session_init: codex_core::codex: new
+2026-02-16T05:06:37.602676Z  INFO session_init:shell_snapshot{thread_id=019c64d7-e9a1-7eb1-a7b0-9b9c14c24428}: codex_core::shell_snapshot: new
+2026-02-16T05:06:37.605711Z  INFO session_loop{thread_id=019c64d7-e9a1-7eb1-a7b0-9b9c14c24428}: codex_core::codex: new
+2026-02-16T05:06:37.816955Z  INFO session_init:shell_snapshot{thread_id=019c64d7-e9a1-7eb1-a7b0-9b9c14c24428}: codex_core::shell_snapshot: Shell snapshot successfully created: /Users/tiemo/.codex/shell_snapshots/019c64d7-e9a1-7eb1-a7b0-9b9c14c24428.sh
+2026-02-16T05:06:37.824995Z  INFO session_init:shell_snapshot{thread_id=019c64d7-e9a1-7eb1-a7b0-9b9c14c24428}: codex_core::shell_snapshot: close time.busy=4.65ms time.idle=218ms
+2026-02-16T05:06:37.825008Z  INFO session_init: codex_core::codex: close time.busy=3.77ms time.idle=220ms
+2026-02-16T05:06:47.443835Z  INFO codex_core::skills::manager: skills cache cleared (1 entries)
+2026-02-16T05:07:18.292893Z  INFO codex_tui::chatwidget: Selected model: gpt-5.3-codex, Selected effort: medium
+2026-02-16T05:07:32.353425Z  INFO session_loop{thread_id=019c64d7-e9a1-7eb1-a7b0-9b9c14c24428}: codex_core::codex::handlers: Shutting down Codex instance
+2026-02-16T05:07:32.353648Z  INFO session_loop{thread_id=019c64d7-e9a1-7eb1-a7b0-9b9c14c24428}: codex_core::codex: close time.busy=41.0ms time.idle=54.7s
+2026-02-17T07:18:39.084212Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.101.0"
+2026-02-17T07:18:39.084614Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0"
+2026-02-17T07:18:39.086488Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.0.0") fetched_at=2026-02-17 04:51:23.433079 UTC
+2026-02-17T07:18:39.086677Z  INFO codex_core::models_manager::cache: models cache: cache version mismatch cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0" cached_version=Some("0.0.0")
+2026-02-17T07:18:39.086803Z  INFO codex_core::models_manager::manager: models cache: no usable cache entry
+2026-02-17T07:18:39.105489Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.101.0"
+2026-02-17T07:18:39.105536Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0"
+2026-02-17T07:18:39.105945Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.0.0") fetched_at=2026-02-17 04:51:23.433079 UTC
+2026-02-17T07:18:39.105949Z  INFO codex_core::models_manager::cache: models cache: cache version mismatch cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0" cached_version=Some("0.0.0")
+2026-02-17T07:18:39.105953Z  INFO codex_core::models_manager::manager: models cache: no usable cache entry
+2026-02-17T07:18:39.105957Z  INFO codex_core::models_manager::manager: models cache: cache miss, fetching remote models
+2026-02-17T07:18:40.958898Z  INFO session_init: codex_core::codex: new
+2026-02-17T07:18:40.964402Z  INFO session_init:shell_snapshot{thread_id=019c6a77-2c3f-7560-8e6c-c7406a6f5c6a}: codex_core::shell_snapshot: new
+2026-02-17T07:18:40.972566Z  INFO session_loop{thread_id=019c6a77-2c3f-7560-8e6c-c7406a6f5c6a}: codex_core::codex: new
+2026-02-17T07:18:41.198212Z  INFO session_init:shell_snapshot{thread_id=019c6a77-2c3f-7560-8e6c-c7406a6f5c6a}: codex_core::shell_snapshot: Shell snapshot successfully created: /Users/tiemo/.codex/shell_snapshots/019c6a77-2c3f-7560-8e6c-c7406a6f5c6a.sh
+2026-02-17T07:18:41.207597Z  INFO session_init:shell_snapshot{thread_id=019c6a77-2c3f-7560-8e6c-c7406a6f5c6a}: codex_core::shell_snapshot: close time.busy=5.85ms time.idle=237ms
+2026-02-17T07:18:41.207720Z  INFO session_init: codex_core::codex: close time.busy=12.1ms time.idle=237ms
+2026-02-17T07:18:41.245559Z  INFO session_loop{thread_id=019c6a77-2c3f-7560-8e6c-c7406a6f5c6a}: codex_core::codex::handlers: Shutting down Codex instance
+2026-02-17T07:18:41.245981Z  INFO session_loop{thread_id=019c6a77-2c3f-7560-8e6c-c7406a6f5c6a}: codex_core::codex: close time.busy=17.3ms time.idle=256ms
