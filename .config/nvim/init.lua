@@ -81,6 +81,10 @@ require('lazy').setup({
     opts = {
       adapters = {
         acp = {
+          opts = {
+            show_presets = false,
+          },
+
           opencode = function()
             return require('codecompanion.adapters').extend('opencode', {
               defaults = {
