@@ -88,28 +88,17 @@ require('lazy').setup({
           opencode = function()
             return require('codecompanion.adapters').extend('opencode', {
               defaults = {
-                model = 'gpt-5.1-codex',
-              },
-            })
-          end,
-          claude_code = function()
-            return require('codecompanion.adapters').extend('claude_code', {
-              env = {
-                CLAUDE_CODE_OAUTH_TOKEN = 'cmd:cat ~/.local/share/claude-key',
-              },
-            })
-          end,
-
-          codex = function()
-            return require('codecompanion.adapters').extend('codex', {
-              defaults = {
-                auth_method = 'chatgpt',
+                model = 'gpt-5.3-codex',
               },
             })
           end,
         },
 
         http = {
+          opts = {
+            show_presets = false,
+          },
+
           zen_openai = function()
             return require('codecompanion.adapters').extend('openai_responses', {
               env = {
@@ -143,21 +132,7 @@ require('lazy').setup({
               url = 'https://opencode.ai/zen/v1/messages',
               schema = {
                 model = {
-                  default = 'claude-haiku-4-5',
-                  choices = {
-                    'claude-sonnet-4-5',
-                    'claude-sonnet-4',
-                    'claude-haiku-4-5',
-                    'claude-3-5-haiku',
-                    'claude-opus-4-5',
-                    'claude-opus-4-1',
-                  },
-                },
-                temperature = {
-                  default = 0.2,
-                },
-                top_p = {
-                  default = 0.2,
+                  default = 'claude-sonnet-4-6',
                 },
               },
             })
@@ -196,20 +171,19 @@ require('lazy').setup({
         },
       },
       opts = {
-        log_level = 'DEBUG',
+        log_level = 'ERROR',
       },
       interactions = {
         chat = {
-          adapter = 'codex',
-          model = 'gpt-5.3-codex/medium',
+          adapter = 'opencode',
         },
         inline = {
-          adapter = 'zen_openai',
-          model = 'gpt-5.1-codex',
+          adapter = 'zen_anthropic',
+          model = 'claude-sonnet-4-6',
         },
         cmd = {
-          adapter = 'zen_openai',
-          model = 'gpt-5.1-codex',
+          adapter = 'zen_anthropic',
+          model = 'claude-sonnet-4-6',
         },
         background = {
           adapter = 'openrouter',
