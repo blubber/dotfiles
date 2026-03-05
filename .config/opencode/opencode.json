@@ -1,4 +1,5 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "model": "gpt-5.1-codex"
+  "model": "gpt-5.1-codex",
+  "plugin": ["opencode-gemini-auth@latest"]
 }

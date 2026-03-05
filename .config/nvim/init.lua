@@ -85,6 +85,14 @@ require('lazy').setup({
             show_presets = false,
           },
 
+          claude_code = function()
+            return require('codecompanion.adapters').extend('claude_code', {
+              env = {
+                CLAUDE_CODE_OAUTH_TOKEN = 'cmd:cat ~/.local/share/claude-key',
+              },
+            })
+          end,
+
           opencode = function()
             return require('codecompanion.adapters').extend('opencode', {
               defaults = {
@@ -171,11 +179,11 @@ require('lazy').setup({
         },
       },
       opts = {
-        log_level = 'ERROR',
+        log_level = 'DEBUG',
       },
       interactions = {
         chat = {
-          adapter = 'opencode',
+          adapter = 'claude_code',
         },
         inline = {
           adapter = 'zen_anthropic',
@@ -187,7 +195,7 @@ require('lazy').setup({
         },
         background = {
           adapter = 'openrouter',
-          model = 'google/gemini-2.5-flash-lite',
+          model = 'google/gemini-3.1-flash-lite',
         },
       },
       prompt_library = {
@@ -477,7 +485,7 @@ require('lazy').setup({
       },
 
       sources = {
-        default = { 'lsp', 'path', 'snippets', 'lazydev', 'codecompanion' },
+        default = { 'lsp', 'path', 'snippets', 'lazydev' },
         providers = {
           lazydev = { module = 'lazydev.integrations.blink', score_offset = 100 },
         },
@@ -504,10 +512,10 @@ require('lazy').setup({
     lazy = false,
     priority = 1000,
     config = function()
-      vim.cmd.colorscheme 'cyberdream'
+      vim.cmd.colorscheme 'default'
 
       vim.cmd.hi 'Normal guibg=black guifg=whit'
-      -- vim.cmd.hi 'Comment guifg=#aaaaff'
+      vim.cmd.hi 'Comment guifg=#aaaaff'
     end,
   },
 
