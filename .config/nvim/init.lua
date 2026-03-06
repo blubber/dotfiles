@@ -85,10 +85,10 @@ require('lazy').setup({
             show_presets = false,
           },
 
-          opencode = function()
-            return require('codecompanion.adapters').extend('opencode', {
+          codex = function()
+            return require('codecompanion.adapters').extend('codex', {
               defaults = {
-                model = 'gpt-5.3-codex',
+                auth_method = 'chatgpt',
               },
             })
           end,
@@ -175,7 +175,7 @@ require('lazy').setup({
       },
       interactions = {
         chat = {
-          adapter = 'opencode',
+          adapter = 'codex',
         },
         inline = {
           adapter = 'zen_anthropic',

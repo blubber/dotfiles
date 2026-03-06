@@ -209,3 +209,321 @@
 2026-02-17T07:18:41.207720Z  INFO session_init: codex_core::codex: close time.busy=12.1ms time.idle=237ms
 2026-02-17T07:18:41.245559Z  INFO session_loop{thread_id=019c6a77-2c3f-7560-8e6c-c7406a6f5c6a}: codex_core::codex::handlers: Shutting down Codex instance
 2026-02-17T07:18:41.245981Z  INFO session_loop{thread_id=019c6a77-2c3f-7560-8e6c-c7406a6f5c6a}: codex_core::codex: close time.busy=17.3ms time.idle=256ms
+2026-03-06T10:57:29.180476Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.101.0"
+2026-03-06T10:57:29.180554Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0"
+2026-03-06T10:57:29.187574Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.0.0") fetched_at=2026-02-19 08:55:59.710150 UTC
+2026-03-06T10:57:29.187602Z  INFO codex_core::models_manager::cache: models cache: cache version mismatch cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0" cached_version=Some("0.0.0")
+2026-03-06T10:57:29.187643Z  INFO codex_core::models_manager::manager: models cache: no usable cache entry
+2026-03-06T10:57:29.389267Z ERROR codex_core::auth: Failed to refresh token: 401 Unauthorized: {
+  "error": {
+    "message": "Your refresh token has already been used to generate a new access token. Please try signing in again.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "refresh_token_reused"
+  }
+}
+2026-03-06T10:57:29.389356Z ERROR codex_core::auth: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-03-06T10:57:29.400072Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.101.0"
+2026-03-06T10:57:29.400103Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0"
+2026-03-06T10:57:29.400629Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.0.0") fetched_at=2026-02-19 08:55:59.710150 UTC
+2026-03-06T10:57:29.400643Z  INFO codex_core::models_manager::cache: models cache: cache version mismatch cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.101.0" cached_version=Some("0.0.0")
+2026-03-06T10:57:29.400651Z  INFO codex_core::models_manager::manager: models cache: no usable cache entry
+2026-03-06T10:57:29.400659Z  INFO codex_core::models_manager::manager: models cache: cache miss, fetching remote models
+2026-03-06T10:57:29.553164Z ERROR codex_core::auth: Failed to refresh token: 401 Unauthorized: {
+  "error": {
+    "message": "Your refresh token has already been used to generate a new access token. Please try signing in again.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "refresh_token_reused"
+  }
+}
+2026-03-06T10:57:29.553192Z ERROR codex_core::auth: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-03-06T10:57:29.572084Z ERROR codex_core::auth: Failed to refresh token: 401 Unauthorized: {
+  "error": {
+    "message": "Your refresh token has already been used to generate a new access token. Please try signing in again.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "refresh_token_reused"
+  }
+}
+2026-03-06T10:57:29.572098Z ERROR codex_core::auth: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-03-06T10:57:29.664840Z ERROR codex_core::models_manager::manager: failed to refresh available models: unexpected status 401 Unauthorized: Provided authentication token is expired. Please try signing in again., url: https://chatgpt.com/backend-api/codex/models?client_version=0.101.0, cf-ray: 9d80d7001eba4547-AMS, request id: 452e65fb-915c-4de3-aabb-232b0edcb858
+2026-03-06T10:57:29.665302Z  INFO session_init: codex_core::codex: new
+2026-03-06T10:57:29.864701Z ERROR codex_core::auth: Failed to refresh token: 401 Unauthorized: {
+  "error": {
+    "message": "Your refresh token has already been used to generate a new access token. Please try signing in again.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "refresh_token_reused"
+  }
+}
+2026-03-06T10:57:29.864756Z ERROR codex_core::auth: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-03-06T10:57:29.866867Z ERROR session_init: codex_core::auth: Failed to refresh token: 401 Unauthorized: {
+  "error": {
+    "message": "Your refresh token has already been used to generate a new access token. Please try signing in again.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "refresh_token_reused"
+  }
+}
+2026-03-06T10:57:29.866949Z ERROR session_init: codex_core::auth: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-03-06T10:57:29.867914Z  INFO session_init:shell_snapshot{thread_id=019cc2cb-9c41-7dc2-93ad-2cf2338616c9}: codex_core::shell_snapshot: new
+2026-03-06T10:57:29.878172Z  INFO session_loop{thread_id=019cc2cb-9c41-7dc2-93ad-2cf2338616c9}: codex_core::codex: new
+2026-03-06T10:57:30.856453Z  INFO session_init:shell_snapshot{thread_id=019cc2cb-9c41-7dc2-93ad-2cf2338616c9}: codex_core::shell_snapshot: Shell snapshot successfully created: /Users/tiemo/.codex/shell_snapshots/019cc2cb-9c41-7dc2-93ad-2cf2338616c9.sh
+2026-03-06T10:57:30.870577Z  INFO session_init:shell_snapshot{thread_id=019cc2cb-9c41-7dc2-93ad-2cf2338616c9}: codex_core::shell_snapshot: close time.busy=14.3ms time.idle=988ms
+2026-03-06T10:57:30.870596Z  INFO session_init: codex_core::codex: close time.busy=13.2ms time.idle=1.19s
+2026-03-06T10:58:17.962337Z  INFO session_loop{thread_id=019cc2cb-9c41-7dc2-93ad-2cf2338616c9}: codex_core::codex::handlers: Shutting down Codex instance
+2026-03-06T10:58:17.962881Z  INFO session_loop{thread_id=019cc2cb-9c41-7dc2-93ad-2cf2338616c9}: codex_core::codex: close time.busy=54.9ms time.idle=48.0s
+2026-03-06T11:00:17.724872Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.111.0"
+2026-03-06T11:00:17.724936Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.111.0"
+2026-03-06T11:00:17.726277Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.0.0") fetched_at=2026-02-19 08:55:59.710150 UTC
+2026-03-06T11:00:17.726308Z  INFO codex_core::models_manager::cache: models cache: cache version mismatch cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.111.0" cached_version=Some("0.0.0")
+2026-03-06T11:00:17.726332Z  INFO codex_core::models_manager::manager: models cache: no usable cache entry
+2026-03-06T11:00:17.900060Z ERROR codex_core::auth: Failed to refresh token: 401 Unauthorized: {
+  "error": {
+    "message": "Your refresh token has already been used to generate a new access token. Please try signing in again.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "refresh_token_reused"
+  }
+}
+2026-03-06T11:00:17.900153Z ERROR codex_core::auth: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-03-06T11:00:17.915630Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.111.0"
+2026-03-06T11:00:17.915661Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.111.0"
+2026-03-06T11:00:17.916562Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.0.0") fetched_at=2026-02-19 08:55:59.710150 UTC
+2026-03-06T11:00:17.916577Z  INFO codex_core::models_manager::cache: models cache: cache version mismatch cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.111.0" cached_version=Some("0.0.0")
+2026-03-06T11:00:17.916609Z  INFO codex_core::models_manager::manager: models cache: no usable cache entry
+2026-03-06T11:00:17.916655Z  INFO codex_core::models_manager::manager: models cache: cache miss, fetching remote models
+2026-03-06T11:00:18.038756Z ERROR codex_core::auth: Failed to refresh token: 401 Unauthorized: {
+  "error": {
+    "message": "Your refresh token has already been used to generate a new access token. Please try signing in again.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "refresh_token_reused"
+  }
+}
+2026-03-06T11:00:18.038837Z ERROR codex_core::auth: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-03-06T11:00:18.151009Z ERROR codex_core::auth: Failed to refresh token: 401 Unauthorized: {
+  "error": {
+    "message": "Your refresh token has already been used to generate a new access token. Please try signing in again.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "refresh_token_reused"
+  }
+}
+2026-03-06T11:00:18.151056Z ERROR codex_core::auth: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-03-06T11:00:18.285643Z ERROR codex_core::models_manager::manager: failed to refresh available models: unexpected status 401 Unauthorized: Provided authentication token is expired. Please try signing in again., url: https://chatgpt.com/backend-api/codex/models?client_version=0.111.0, cf-ray: 9d80db1dbb2e4bb6-AMS, request id: 37fc95d0-4a3c-4914-a702-f3437b832523
+2026-03-06T11:00:18.287394Z  INFO session_init: codex_core::codex: new
+2026-03-06T11:00:18.390744Z ERROR codex_core::auth: Failed to refresh token: 401 Unauthorized: {
+  "error": {
+    "message": "Your refresh token has already been used to generate a new access token. Please try signing in again.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "refresh_token_reused"
+  }
+}
+2026-03-06T11:00:18.390789Z ERROR codex_core::auth: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-03-06T11:00:18.421146Z ERROR session_init: codex_core::auth: Failed to refresh token: 401 Unauthorized: {
+  "error": {
+    "message": "Your refresh token has already been used to generate a new access token. Please try signing in again.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "refresh_token_reused"
+  }
+}
+2026-03-06T11:00:18.421190Z ERROR session_init: codex_core::auth: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-03-06T11:00:18.421742Z  INFO session_init:shell_snapshot{thread_id=019cc2ce-2eef-77d0-a386-265fc67d56ba}: codex_core::shell_snapshot: new
+2026-03-06T11:00:18.428098Z  INFO session_loop{thread_id=019cc2ce-2eef-77d0-a386-265fc67d56ba}: codex_core::codex: new
+2026-03-06T11:00:18.429473Z  INFO session_loop{thread_id=019cc2ce-2eef-77d0-a386-265fc67d56ba}:submission_dispatch{submission.id="019cc2ce-2f7d-79a3-8a18-f41ee1e21b44"}: codex_core::codex: new
+2026-03-06T11:00:18.429660Z  INFO session_loop{thread_id=019cc2ce-2eef-77d0-a386-265fc67d56ba}:submission_dispatch{submission.id="019cc2ce-2f7d-79a3-8a18-f41ee1e21b44"}: codex_core::codex: close time.busy=150µs time.idle=38.0µs
+2026-03-06T11:00:18.429674Z  INFO session_loop{thread_id=019cc2ce-2eef-77d0-a386-265fc67d56ba}:submission_dispatch{submission.id="019cc2ce-2f7d-79a3-8a18-f425cd238fdd"}: codex_core::codex: new
+2026-03-06T11:00:18.476288Z  INFO session_loop{thread_id=019cc2ce-2eef-77d0-a386-265fc67d56ba}:submission_dispatch{submission.id="019cc2ce-2f7d-79a3-8a18-f425cd238fdd"}: codex_core::codex: close time.busy=46.0ms time.idle=564µs
+2026-03-06T11:00:19.032461Z  INFO codex_core::rollout::metadata: state db backfill scanned=66, upserted=66, failed=0
+2026-03-06T11:00:19.427299Z  INFO session_init:shell_snapshot{thread_id=019cc2ce-2eef-77d0-a386-265fc67d56ba}: codex_core::shell_snapshot: Shell snapshot successfully created: /Users/tiemo/.codex/shell_snapshots/019cc2ce-2eef-77d0-a386-265fc67d56ba.tmp-1772794818422098000
+2026-03-06T11:00:19.443248Z  WARN session_init:shell_snapshot{thread_id=019cc2ce-2eef-77d0-a386-265fc67d56ba}: codex_core::shell_snapshot: Failed to delete shell snapshot at "/Users/tiemo/.codex/shell_snapshots/019cc2ce-2eef-77d0-a386-265fc67d56ba.tmp-1772794818422098000": Os { code: 2, kind: NotFound, message: "No such file or directory" }
+2026-03-06T11:00:19.443348Z  INFO session_init:shell_snapshot{thread_id=019cc2ce-2eef-77d0-a386-265fc67d56ba}: codex_core::shell_snapshot: close time.busy=6.90ms time.idle=1.01s
+2026-03-06T11:00:19.443354Z  INFO session_init: codex_core::codex: close time.busy=38.6ms time.idle=1.12s
+2026-03-06T11:01:17.183703Z  INFO codex_tui::app: Selected model: gpt-5.3-codex, Selected effort: medium
+2026-03-06T11:01:18.067168Z ERROR codex_core::auth: Failed to refresh token: 401 Unauthorized: {
+  "error": {
+    "message": "Your refresh token has already been used to generate a new access token. Please try signing in again.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "refresh_token_reused"
+  }
+}
+2026-03-06T11:01:18.067227Z ERROR codex_core::auth: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-03-06T11:01:19.856322Z  INFO session_loop{thread_id=019cc2ce-2eef-77d0-a386-265fc67d56ba}:submission_dispatch{submission.id="019cc2cf-1f70-7b83-8621-b0464de71b4d"}: codex_core::codex: new
+2026-03-06T11:01:19.856426Z  INFO session_loop{thread_id=019cc2ce-2eef-77d0-a386-265fc67d56ba}:submission_dispatch{submission.id="019cc2cf-1f70-7b83-8621-b0464de71b4d"}: codex_core::codex::handlers: Shutting down Codex instance
+2026-03-06T11:01:19.856548Z  INFO session_loop{thread_id=019cc2ce-2eef-77d0-a386-265fc67d56ba}:submission_dispatch{submission.id="019cc2cf-1f70-7b83-8621-b0464de71b4d"}: codex_core::codex: close time.busy=207µs time.idle=20.2µs
+2026-03-06T11:01:19.856570Z  INFO session_loop{thread_id=019cc2ce-2eef-77d0-a386-265fc67d56ba}: codex_core::codex: close time.busy=46.6ms time.idle=61.4s
+2026-03-06T11:14:39.953095Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.111.0"
+2026-03-06T11:14:39.953287Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.111.0"
+2026-03-06T11:14:39.956740Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.0.0") fetched_at=2026-02-19 08:55:59.710150 UTC
+2026-03-06T11:14:39.956762Z  INFO codex_core::models_manager::cache: models cache: cache version mismatch cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.111.0" cached_version=Some("0.0.0")
+2026-03-06T11:14:39.956768Z  INFO codex_core::models_manager::manager: models cache: no usable cache entry
+2026-03-06T11:14:40.210297Z ERROR codex_core::auth: Failed to refresh token: 401 Unauthorized: {
+  "error": {
+    "message": "Your refresh token has already been used to generate a new access token. Please try signing in again.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "refresh_token_reused"
+  }
+}
+2026-03-06T11:14:40.210464Z ERROR codex_core::auth: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-03-06T11:14:40.232965Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.111.0"
+2026-03-06T11:14:40.233002Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.111.0"
+2026-03-06T11:14:40.235442Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.0.0") fetched_at=2026-02-19 08:55:59.710150 UTC
+2026-03-06T11:14:40.235454Z  INFO codex_core::models_manager::cache: models cache: cache version mismatch cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.111.0" cached_version=Some("0.0.0")
+2026-03-06T11:14:40.235656Z  INFO codex_core::models_manager::manager: models cache: no usable cache entry
+2026-03-06T11:14:40.235713Z  INFO codex_core::models_manager::manager: models cache: cache miss, fetching remote models
+2026-03-06T11:14:40.359268Z ERROR codex_core::auth: Failed to refresh token: 401 Unauthorized: {
+  "error": {
+    "message": "Your refresh token has already been used to generate a new access token. Please try signing in again.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "refresh_token_reused"
+  }
+}
+2026-03-06T11:14:40.359413Z ERROR codex_core::auth: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-03-06T11:14:40.399746Z ERROR codex_core::auth: Failed to refresh token: 401 Unauthorized: {
+  "error": {
+    "message": "Your refresh token has already been used to generate a new access token. Please try signing in again.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "refresh_token_reused"
+  }
+}
+2026-03-06T11:14:40.399796Z ERROR codex_core::auth: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-03-06T11:14:40.571551Z ERROR codex_core::models_manager::manager: failed to refresh available models: unexpected status 401 Unauthorized: Provided authentication token is expired. Please try signing in again., url: https://chatgpt.com/backend-api/codex/models?client_version=0.111.0, cf-ray: 9d80f02acd009fc9-AMS, request id: df792ed9-3269-467a-a9de-4f5e15e3a27f
+2026-03-06T11:14:40.573389Z  INFO session_init: codex_core::codex: new
+2026-03-06T11:14:40.593664Z ERROR codex_core::auth: Failed to refresh token: 401 Unauthorized: {
+  "error": {
+    "message": "Your refresh token has already been used to generate a new access token. Please try signing in again.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "refresh_token_reused"
+  }
+}
+2026-03-06T11:14:40.593708Z ERROR codex_core::auth: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-03-06T11:14:40.704821Z ERROR session_init: codex_core::auth: Failed to refresh token: 401 Unauthorized: {
+  "error": {
+    "message": "Your refresh token has already been used to generate a new access token. Please try signing in again.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "refresh_token_reused"
+  }
+}
+2026-03-06T11:14:40.704905Z ERROR session_init: codex_core::auth: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-03-06T11:14:40.707941Z  INFO session_init:shell_snapshot{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}: codex_core::shell_snapshot: new
+2026-03-06T11:14:40.720090Z  INFO session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}: codex_core::codex: new
+2026-03-06T11:14:40.722947Z  INFO session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-57d2-7b22-949f-175201b6ee1a"}: codex_core::codex: new
+2026-03-06T11:14:40.723728Z  INFO session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-57d2-7b22-949f-175201b6ee1a"}: codex_core::codex: close time.busy=760µs time.idle=21.4µs
+2026-03-06T11:14:40.723754Z  INFO session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-57d2-7b22-949f-176ea0fdd080"}: codex_core::codex: new
+2026-03-06T11:14:40.755959Z  INFO session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-57d2-7b22-949f-176ea0fdd080"}: codex_core::codex: close time.busy=31.8ms time.idle=424µs
+2026-03-06T11:14:45.161565Z  INFO session_init:shell_snapshot{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}: codex_core::shell_snapshot: Shell snapshot successfully created: /Users/tiemo/.codex/shell_snapshots/019cc2db-573e-7720-a7a7-237d57c09955.tmp-1772795680709069000
+2026-03-06T11:14:45.179815Z  WARN session_init:shell_snapshot{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}: codex_core::shell_snapshot: Failed to delete shell snapshot at "/Users/tiemo/.codex/shell_snapshots/019cc2db-573e-7720-a7a7-237d57c09955.tmp-1772795680709069000": Os { code: 2, kind: NotFound, message: "No such file or directory" }
+2026-03-06T11:14:45.179931Z  INFO session_init:shell_snapshot{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}: codex_core::shell_snapshot: close time.busy=8.12ms time.idle=4.46s
+2026-03-06T11:14:45.179936Z  INFO session_init: codex_core::codex: close time.busy=31.7ms time.idle=4.57s
+2026-03-06T11:14:50.932161Z  INFO session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-7fb4-76f0-b24e-45cf28a50198"}: codex_core::codex: new
+2026-03-06T11:14:50.933150Z  INFO session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-7fb4-76f0-b24e-45cf28a50198"}:turn{otel.name="session_task.turn" thread.id=019cc2db-573e-7720-a7a7-237d57c09955 turn.id=019cc2db-7fb4-76f0-b24e-45cf28a50198 model=gpt-5.4}: codex_core::tasks: new
+2026-03-06T11:14:50.933203Z  INFO session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-7fb4-76f0-b24e-45dae43e94af"}: codex_core::codex: new
+2026-03-06T11:14:50.933243Z  INFO session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-7fb4-76f0-b24e-45dae43e94af"}: codex_core::codex: close time.busy=34.1µs time.idle=5.50µs
+2026-03-06T11:14:51.184893Z ERROR session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-7fb4-76f0-b24e-45cf28a50198"}:turn{otel.name="session_task.turn" thread.id=019cc2db-573e-7720-a7a7-237d57c09955 turn.id=019cc2db-7fb4-76f0-b24e-45cf28a50198 model=gpt-5.4}: codex_core::auth: Failed to refresh token: 401 Unauthorized: {
+  "error": {
+    "message": "Your refresh token has already been used to generate a new access token. Please try signing in again.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "refresh_token_reused"
+  }
+}
+2026-03-06T11:14:51.185441Z ERROR session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-7fb4-76f0-b24e-45cf28a50198"}:turn{otel.name="session_task.turn" thread.id=019cc2db-573e-7720-a7a7-237d57c09955 turn.id=019cc2db-7fb4-76f0-b24e-45cf28a50198 model=gpt-5.4}: codex_core::auth: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-03-06T11:14:51.283048Z  INFO session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-7fb4-76f0-b24e-45cf28a50198"}:turn{otel.name="session_task.turn" thread.id=019cc2db-573e-7720-a7a7-237d57c09955 turn.id=019cc2db-7fb4-76f0-b24e-45cf28a50198 model=gpt-5.4}: codex_core::auth: Reloading auth for account f434a992-a1d5-4e06-91df-a7e6d7955c60
+2026-03-06T11:14:51.283112Z  INFO session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-7fb4-76f0-b24e-45cf28a50198"}:turn{otel.name="session_task.turn" thread.id=019cc2db-573e-7720-a7a7-237d57c09955 turn.id=019cc2db-7fb4-76f0-b24e-45cf28a50198 model=gpt-5.4}: codex_core::auth: Reloaded auth, changed: false
+2026-03-06T11:14:51.458429Z ERROR session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-7fb4-76f0-b24e-45cf28a50198"}:turn{otel.name="session_task.turn" thread.id=019cc2db-573e-7720-a7a7-237d57c09955 turn.id=019cc2db-7fb4-76f0-b24e-45cf28a50198 model=gpt-5.4}: codex_core::auth: Failed to refresh token: 401 Unauthorized: {
+  "error": {
+    "message": "Your refresh token has already been used to generate a new access token. Please try signing in again.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "refresh_token_reused"
+  }
+}
+2026-03-06T11:14:51.458502Z ERROR session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-7fb4-76f0-b24e-45cf28a50198"}:turn{otel.name="session_task.turn" thread.id=019cc2db-573e-7720-a7a7-237d57c09955 turn.id=019cc2db-7fb4-76f0-b24e-45cf28a50198 model=gpt-5.4}: codex_core::auth: Failed to refresh token: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-03-06T11:14:51.641682Z  INFO session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-7fb4-76f0-b24e-45cf28a50198"}:turn{otel.name="session_task.turn" thread.id=019cc2db-573e-7720-a7a7-237d57c09955 turn.id=019cc2db-7fb4-76f0-b24e-45cf28a50198 model=gpt-5.4}: codex_core::auth: Refreshing token
+2026-03-06T11:14:51.777471Z ERROR session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-7fb4-76f0-b24e-45cf28a50198"}:turn{otel.name="session_task.turn" thread.id=019cc2db-573e-7720-a7a7-237d57c09955 turn.id=019cc2db-7fb4-76f0-b24e-45cf28a50198 model=gpt-5.4}: codex_core::auth: Failed to refresh token: 401 Unauthorized: {
+  "error": {
+    "message": "Your refresh token has already been used to generate a new access token. Please try signing in again.",
+    "type": "invalid_request_error",
+    "param": null,
+    "code": "refresh_token_reused"
+  }
+}
+2026-03-06T11:14:51.777652Z  INFO session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-7fb4-76f0-b24e-45cf28a50198"}:turn{otel.name="session_task.turn" thread.id=019cc2db-573e-7720-a7a7-237d57c09955 turn.id=019cc2db-7fb4-76f0-b24e-45cf28a50198 model=gpt-5.4}: codex_core::codex: Turn error: Your access token could not be refreshed because your refresh token was already used. Please log out and sign in again.
+2026-03-06T11:14:51.777923Z  INFO session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-7fb4-76f0-b24e-45cf28a50198"}:turn{otel.name="session_task.turn" thread.id=019cc2db-573e-7720-a7a7-237d57c09955 turn.id=019cc2db-7fb4-76f0-b24e-45cf28a50198 model=gpt-5.4}: codex_core::tasks: close time.busy=48.1ms time.idle=797ms
+2026-03-06T11:14:51.777937Z  INFO session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-7fb4-76f0-b24e-45cf28a50198"}: codex_core::codex: close time.busy=1.01ms time.idle=845ms
+2026-03-06T11:15:05.217347Z  INFO session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-b781-7210-81e7-f6ccab787538"}: codex_core::codex: new
+2026-03-06T11:15:05.217435Z  INFO session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-b781-7210-81e7-f6ccab787538"}: codex_core::codex::handlers: Shutting down Codex instance
+2026-03-06T11:15:05.217711Z  INFO session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}:submission_dispatch{submission.id="019cc2db-b781-7210-81e7-f6ccab787538"}: codex_core::codex: close time.busy=331µs time.idle=32.9µs
+2026-03-06T11:15:05.217744Z  INFO session_loop{thread_id=019cc2db-573e-7720-a7a7-237d57c09955}: codex_core::codex: close time.busy=34.3ms time.idle=24.5s
+2026-03-06T11:16:27.427329Z  INFO codex_core::auth: Reloading auth
+2026-03-06T11:16:27.453594Z  INFO codex_core::auth: Reloaded auth, changed: true
+2026-03-06T11:16:43.708121Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.111.0"
+2026-03-06T11:16:43.708138Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.111.0"
+2026-03-06T11:16:43.708786Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.0.0") fetched_at=2026-02-19 08:55:59.710150 UTC
+2026-03-06T11:16:43.708801Z  INFO codex_core::models_manager::cache: models cache: cache version mismatch cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.111.0" cached_version=Some("0.0.0")
+2026-03-06T11:16:43.708808Z  INFO codex_core::models_manager::manager: models cache: no usable cache entry
+2026-03-06T11:16:43.714054Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.111.0"
+2026-03-06T11:16:43.714062Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.111.0"
+2026-03-06T11:16:43.714321Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.0.0") fetched_at=2026-02-19 08:55:59.710150 UTC
+2026-03-06T11:16:43.714333Z  INFO codex_core::models_manager::cache: models cache: cache version mismatch cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.111.0" cached_version=Some("0.0.0")
+2026-03-06T11:16:43.714339Z  INFO codex_core::models_manager::manager: models cache: no usable cache entry
+2026-03-06T11:16:43.714343Z  INFO codex_core::models_manager::manager: models cache: cache miss, fetching remote models
+2026-03-06T11:16:45.734687Z  INFO session_init: codex_core::codex: new
+2026-03-06T11:16:45.756442Z  INFO session_init:shell_snapshot{thread_id=019cc2dd-4026-7970-badf-6964393eb2f5}: codex_core::shell_snapshot: new
+2026-03-06T11:16:45.759698Z  INFO session_loop{thread_id=019cc2dd-4026-7970-badf-6964393eb2f5}: codex_core::codex: new
+2026-03-06T11:16:45.760172Z  INFO session_loop{thread_id=019cc2dd-4026-7970-badf-6964393eb2f5}:submission_dispatch{submission.id="019cc2dd-4040-78b0-a1f2-232a908fecd8"}: codex_core::codex: new
+2026-03-06T11:16:45.760244Z  INFO session_loop{thread_id=019cc2dd-4026-7970-badf-6964393eb2f5}:submission_dispatch{submission.id="019cc2dd-4040-78b0-a1f2-232a908fecd8"}: codex_core::codex: close time.busy=33.7µs time.idle=37.6µs
+2026-03-06T11:16:45.760257Z  INFO session_loop{thread_id=019cc2dd-4026-7970-badf-6964393eb2f5}:submission_dispatch{submission.id="019cc2dd-4040-78b0-a1f2-23316c541345"}: codex_core::codex: new
+2026-03-06T11:16:45.796524Z  INFO session_loop{thread_id=019cc2dd-4026-7970-badf-6964393eb2f5}:submission_dispatch{submission.id="019cc2dd-4040-78b0-a1f2-23316c541345"}: codex_core::codex: close time.busy=35.9ms time.idle=357µs
+2026-03-06T11:16:46.715724Z  INFO session_init:shell_snapshot{thread_id=019cc2dd-4026-7970-badf-6964393eb2f5}: codex_core::shell_snapshot: Shell snapshot successfully created: /Users/tiemo/.codex/shell_snapshots/019cc2dd-4026-7970-badf-6964393eb2f5.tmp-1772795805756546000
+2026-03-06T11:16:46.733567Z  WARN session_init:shell_snapshot{thread_id=019cc2dd-4026-7970-badf-6964393eb2f5}: codex_core::shell_snapshot: Failed to delete shell snapshot at "/Users/tiemo/.codex/shell_snapshots/019cc2dd-4026-7970-badf-6964393eb2f5.tmp-1772795805756546000": Os { code: 2, kind: NotFound, message: "No such file or directory" }
+2026-03-06T11:16:46.733684Z  INFO session_init:shell_snapshot{thread_id=019cc2dd-4026-7970-badf-6964393eb2f5}: codex_core::shell_snapshot: close time.busy=5.33ms time.idle=972ms
+2026-03-06T11:16:46.733690Z  INFO session_init: codex_core::codex: close time.busy=24.2ms time.idle=975ms
+2026-03-06T11:17:20.980014Z  INFO codex_tui::app: Selected model: gpt-5.4, Selected effort: medium
+2026-03-06T11:17:28.631676Z  INFO session_loop{thread_id=019cc2dd-4026-7970-badf-6964393eb2f5}:submission_dispatch{submission.id="019cc2dd-e7b7-70c1-a606-82c8b1d38dc3"}: codex_core::codex: new
+2026-03-06T11:17:28.632739Z  INFO session_loop{thread_id=019cc2dd-4026-7970-badf-6964393eb2f5}:submission_dispatch{submission.id="019cc2dd-e7b7-70c1-a606-82c8b1d38dc3"}:turn{otel.name="session_task.turn" thread.id=019cc2dd-4026-7970-badf-6964393eb2f5 turn.id=019cc2dd-e7b7-70c1-a606-82c8b1d38dc3 model=gpt-5.4}: codex_core::tasks: new
+2026-03-06T11:17:28.632815Z  INFO session_loop{thread_id=019cc2dd-4026-7970-badf-6964393eb2f5}:submission_dispatch{submission.id="019cc2dd-e7b7-70c1-a606-82d69def38fa"}: codex_core::codex: new
+2026-03-06T11:17:28.632838Z  INFO session_loop{thread_id=019cc2dd-4026-7970-badf-6964393eb2f5}:submission_dispatch{submission.id="019cc2dd-e7b7-70c1-a606-82d69def38fa"}: codex_core::codex: close time.busy=16.3µs time.idle=6.00µs
+2026-03-06T11:17:29.664431Z  INFO session_loop{thread_id=019cc2dd-4026-7970-badf-6964393eb2f5}:submission_dispatch{submission.id="019cc2dd-e7b7-70c1-a606-82c8b1d38dc3"}:turn{otel.name="session_task.turn" thread.id=019cc2dd-4026-7970-badf-6964393eb2f5 turn.id=019cc2dd-e7b7-70c1-a606-82c8b1d38dc3 model=gpt-5.4}: codex_core::tasks: close time.busy=5.59ms time.idle=1.03s
+2026-03-06T11:17:29.664441Z  INFO session_loop{thread_id=019cc2dd-4026-7970-badf-6964393eb2f5}:submission_dispatch{submission.id="019cc2dd-e7b7-70c1-a606-82c8b1d38dc3"}: codex_core::codex: close time.busy=1.09ms time.idle=1.03s
+2026-03-06T11:17:53.679869Z  INFO codex_tui::app: Selected model: gpt-5.4, Selected effort: medium
+2026-03-06T11:17:59.262082Z  INFO session_loop{thread_id=019cc2dd-4026-7970-badf-6964393eb2f5}:submission_dispatch{submission.id="019cc2de-5f5d-7b61-a1ef-6e587459db4c"}: codex_core::codex: new
+2026-03-06T11:17:59.262146Z  INFO session_loop{thread_id=019cc2dd-4026-7970-badf-6964393eb2f5}:submission_dispatch{submission.id="019cc2de-5f5d-7b61-a1ef-6e587459db4c"}: codex_core::codex::handlers: Shutting down Codex instance
+2026-03-06T11:17:59.262397Z  INFO session_loop{thread_id=019cc2dd-4026-7970-badf-6964393eb2f5}:submission_dispatch{submission.id="019cc2de-5f5d-7b61-a1ef-6e587459db4c"}: codex_core::codex: close time.busy=227µs time.idle=89.5µs
+2026-03-06T11:17:59.262473Z  INFO session_loop{thread_id=019cc2dd-4026-7970-badf-6964393eb2f5}: codex_core::codex: close time.busy=37.7ms time.idle=73.5s
+2026-03-06T11:18:50.800084Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.111.0"
+2026-03-06T11:18:50.800102Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.111.0"
+2026-03-06T11:18:50.800735Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.0.0") fetched_at=2026-03-06 11:18:34.452406 UTC
+2026-03-06T11:18:50.800748Z  INFO codex_core::models_manager::cache: models cache: cache version mismatch cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.111.0" cached_version=Some("0.0.0")
+2026-03-06T11:18:50.800755Z  INFO codex_core::models_manager::manager: models cache: no usable cache entry
+2026-03-06T11:18:50.815272Z  INFO codex_core::models_manager::manager: models cache: evaluating cache eligibility client_version="0.111.0"
+2026-03-06T11:18:50.815280Z  INFO codex_core::models_manager::cache: models cache: attempting load_fresh cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.111.0"
+2026-03-06T11:18:50.815537Z  INFO codex_core::models_manager::cache: models cache: loaded cache file cache_path=/Users/tiemo/.codex/models_cache.json cached_version=Some("0.0.0") fetched_at=2026-03-06 11:18:34.452406 UTC
+2026-03-06T11:18:50.815544Z  INFO codex_core::models_manager::cache: models cache: cache version mismatch cache_path=/Users/tiemo/.codex/models_cache.json expected_version="0.111.0" cached_version=Some("0.0.0")
+2026-03-06T11:18:50.815551Z  INFO codex_core::models_manager::manager: models cache: no usable cache entry
+2026-03-06T11:18:50.815557Z  INFO codex_core::models_manager::manager: models cache: cache miss, fetching remote models
+2026-03-06T11:18:51.057515Z  INFO session_init: codex_core::codex: new
+2026-03-06T11:18:51.067676Z  INFO session_init:shell_snapshot{thread_id=019cc2df-29b1-7303-abfb-c4ac0ac93603}: codex_core::shell_snapshot: new
+2026-03-06T11:18:51.071256Z  INFO session_loop{thread_id=019cc2df-29b1-7303-abfb-c4ac0ac93603}: codex_core::codex: new
+2026-03-06T11:18:51.071783Z  INFO session_loop{thread_id=019cc2df-29b1-7303-abfb-c4ac0ac93603}:submission_dispatch{submission.id="019cc2df-29bf-7b40-b02e-b607d982f364"}: codex_core::codex: new
+2026-03-06T11:18:51.071991Z  INFO session_loop{thread_id=019cc2df-29b1-7303-abfb-c4ac0ac93603}:submission_dispatch{submission.id="019cc2df-29bf-7b40-b02e-b607d982f364"}: codex_core::codex: close time.busy=148µs time.idle=60.1µs
+2026-03-06T11:18:51.072007Z  INFO session_loop{thread_id=019cc2df-29b1-7303-abfb-c4ac0ac93603}:submission_dispatch{submission.id="019cc2df-29bf-7b40-b02e-b61685885b93"}: codex_core::codex: new
+2026-03-06T11:18:51.108293Z  INFO session_loop{thread_id=019cc2df-29b1-7303-abfb-c4ac0ac93603}:submission_dispatch{submission.id="019cc2df-29bf-7b40-b02e-b61685885b93"}: codex_core::codex: close time.busy=35.7ms time.idle=580µs
+2026-03-06T11:18:52.011139Z  INFO session_init:shell_snapshot{thread_id=019cc2df-29b1-7303-abfb-c4ac0ac93603}: codex_core::shell_snapshot: Shell snapshot successfully created: /Users/tiemo/.codex/shell_snapshots/019cc2df-29b1-7303-abfb-c4ac0ac93603.tmp-1772795931067764000
+2026-03-06T11:18:52.028412Z  WARN session_init:shell_snapshot{thread_id=019cc2df-29b1-7303-abfb-c4ac0ac93603}: codex_core::shell_snapshot: Failed to delete shell snapshot at "/Users/tiemo/.codex/shell_snapshots/019cc2df-29b1-7303-abfb-c4ac0ac93603.tmp-1772795931067764000": Os { code: 2, kind: NotFound, message: "No such file or directory" }
+2026-03-06T11:18:52.028503Z  INFO session_init:shell_snapshot{thread_id=019cc2df-29b1-7303-abfb-c4ac0ac93603}: codex_core::shell_snapshot: close time.busy=5.13ms time.idle=956ms
+2026-03-06T11:18:52.028509Z  INFO session_init: codex_core::codex: close time.busy=12.4ms time.idle=959ms
+2026-03-06T11:19:23.059633Z  INFO session_loop{thread_id=019cc2df-29b1-7303-abfb-c4ac0ac93603}:submission_dispatch{submission.id="019cc2df-a6b3-7d82-a32f-c58c42777381"}: codex_core::codex: new
+2026-03-06T11:19:23.059678Z  INFO session_loop{thread_id=019cc2df-29b1-7303-abfb-c4ac0ac93603}:submission_dispatch{submission.id="019cc2df-a6b3-7d82-a32f-c58c42777381"}: codex_core::codex::handlers: Shutting down Codex instance
+2026-03-06T11:19:23.059803Z  INFO session_loop{thread_id=019cc2df-29b1-7303-abfb-c4ac0ac93603}:submission_dispatch{submission.id="019cc2df-a6b3-7d82-a32f-c58c42777381"}: codex_core::codex: close time.busy=147µs time.idle=24.3µs
+2026-03-06T11:19:23.059826Z  INFO session_loop{thread_id=019cc2df-29b1-7303-abfb-c4ac0ac93603}: codex_core::codex: close time.busy=36.2ms time.idle=32.0s
