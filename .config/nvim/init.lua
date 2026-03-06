@@ -85,14 +85,6 @@ require('lazy').setup({
             show_presets = false,
           },
 
-          claude_code = function()
-            return require('codecompanion.adapters').extend('claude_code', {
-              env = {
-                CLAUDE_CODE_OAUTH_TOKEN = 'cmd:cat ~/.local/share/claude-key',
-              },
-            })
-          end,
-
           opencode = function()
             return require('codecompanion.adapters').extend('opencode', {
               defaults = {
@@ -183,7 +175,7 @@ require('lazy').setup({
       },
       interactions = {
         chat = {
-          adapter = 'claude_code',
+          adapter = 'opencode',
         },
         inline = {
           adapter = 'zen_anthropic',
