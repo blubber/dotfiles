@@ -1,9 +1,3 @@
-auth.json
-history.jsonl
-log
-models_cache.json
-sessions
-shell_snapshots
-skills
-tmp
-version.json
+*
+!.gitignore
+!config.toml
