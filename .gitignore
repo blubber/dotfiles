@@ -19,3 +19,6 @@
 # SSH host fingerprints are machine-local
 .ssh/known_hosts
 .ssh/known_hosts.old
+
+.local/share
+.local/state
